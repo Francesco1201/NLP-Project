@@ -1,0 +1,30 @@
+task,criterion,Abstract,Procedural,Exception-heavy,Thematic,Social/party
+Explain,Task understanding (1-5),4.33,4.78,4.56,4.78,5.00
+Explain,Coverage (1-5),3.00,2.00,2.78,1.78,2.33
+Explain,Consistency (1-5),2.22,2.44,3.00,2.22,2.56
+Explain,Hallucination (1-5),1.56,1.33,2.44,1.67,2.11
+Flaw Detection,Task understanding (1-5),3.22,3.33,2.89,3.11,3.00
+Flaw Detection,Recall,30%,22%,15%,7%,15%
+Flaw Detection,Recall: missing,22%,22%,22%,0%,11%
+Flaw Detection,Recall: ambiguous,33%,11%,22%,22%,11%
+Flaw Detection,Recall: inconsistent,33%,33%,0%,0%,22%
+Flaw Detection,Type correct (of detected),62%,67%,100%,50%,50%
+Flaw Detection,Exact fix (of detected),0%,0%,0%,0%,0%
+Flaw Detection,Partial or exact fix (of detected),50%,17%,75%,0%,0%
+Flaw Detection,Invented problems per answer,6.89,8.67,7.56,8.78,8.56
+Simulation,Task understanding (1-5),4.11,3.44,3.67,3.67,3.44
+Simulation,Move correctness: 2 / 1 / 0 (%),0 / 0 / 100,0 / 22 / 78,0 / 33 / 67,0 / 56 / 44,11 / 22 / 67
+Simulation,Consistency (1-5),1.67,1.44,1.22,1.78,1.67
+Simulation,Hallucination (1-5),2.44,2.78,2.22,2.56,2.89
+Generation of a New Game,Task understanding (1-5),4.33,4.67,4.33,4.67,5.00
+Generation of a New Game,Constraint adherence (1-5),2.33,3.33,4.00,3.67,4.00
+Generation of a New Game,Completeness (1-5),2.67,3.00,3.00,3.33,2.67
+Generation of a New Game,Playability (1-5),2.33,3.00,2.67,2.67,2.00
+Generation of a New Game,Balance: 2 / 1 / 0 (%),0 / 67 / 33,0 / 67 / 33,33 / 33 / 33,0 / 67 / 33,0 / 100 / 0
+Generation of a New Game,Fun: 2 / 1 / 0 (%),0 / 67 / 33,0 / 100 / 0,33 / 33 / 33,0 / 67 / 33,0 / 100 / 0
+Variant,Task understanding (1-5),5.00,5.00,5.00,5.00,4.67
+Variant,Meaningful variant: 2 / 1 / 0 (%),100 / 0 / 0,100 / 0 / 0,67 / 0 / 33,33 / 0 / 67,67 / 0 / 33
+Variant,Consistency (1-5),2.67,3.00,2.67,2.33,2.00
+Variant,Hallucination (1-5),3.33,4.67,3.67,4.00,4.00
+Variant,Balance: 2 / 1 / 0 (%),0 / 100 / 0,0 / 100 / 0,0 / 100 / 0,0 / 67 / 33,0 / 67 / 33
+Variant,Fun: 2 / 1 / 0 (%),0 / 100 / 0,0 / 100 / 0,0 / 67 / 33,0 / 67 / 33,0 / 67 / 33

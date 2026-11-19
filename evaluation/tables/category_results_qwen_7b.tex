@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\caption{Results of all criteria per task and game category for Qwen 7B. Criteria on a 1--5 scale are means; criteria on a 0--2 scale are the percentage of answers with score 2/1/0. Recall is the share of injected flaws detected; Type correct and fixes are computed on detected flaws; invented problems are a mean per answer.}\label{tab:category_results_qwen_7b}%
+\footnotesize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Criterion} & \textbf{\shortstack[r]{Abstract}} & \textbf{\shortstack[r]{Procedural}} & \textbf{\shortstack[r]{Exception-\\heavy}} & \textbf{\shortstack[r]{Thematic}} & \textbf{\shortstack[r]{Social/\\party}} \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Explain}} \\
+Task understanding (1--5) & 4.67 & 5.00 & 5.00 & 4.89 & 4.67 \\
+Coverage (1--5) & 4.67 & 3.78 & 3.78 & 3.11 & 4.00 \\
+Consistency (1--5) & 4.33 & 4.11 & 3.78 & 3.22 & 3.56 \\
+Hallucination (1--5) & 3.67 & 3.22 & 3.44 & 3.11 & 3.33 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Flaw Detection}} \\
+Task understanding (1--5) & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 \\
+Recall & 56\% & 22\% & 41\% & 19\% & 37\% \\
+\quad Missing & 56\% & 11\% & 33\% & 11\% & 56\% \\
+\quad Ambiguous & 56\% & 33\% & 78\% & 11\% & 44\% \\
+\quad Inconsistent & 56\% & 22\% & 11\% & 33\% & 11\% \\
+Type correct & 67\% & 33\% & 36\% & 60\% & 50\% \\
+Exact fix & 80\% & 0\% & 45\% & 0\% & 10\% \\
+Partial or exact fix & 80\% & 17\% & 64\% & 40\% & 20\% \\
+Invented problems & 4.78 & 9.00 & 7.11 & 8.67 & 7.56 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Simulation}} \\
+Task understanding (1--5) & 4.78 & 4.89 & 5.00 & 4.67 & 5.00 \\
+Move correctness (2/1/0, \%) & 11/11/78 & 0/33/67 & 11/67/22 & 0/44/56 & 11/44/44 \\
+Consistency (1--5) & 2.00 & 2.33 & 2.67 & 2.56 & 2.44 \\
+Hallucination (1--5) & 2.78 & 2.89 & 4.00 & 3.11 & 4.00 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Generation of a New Game}} \\
+Task understanding (1--5) & 4.33 & 4.33 & 4.00 & 4.67 & 5.00 \\
+Constraint adherence (1--5) & 4.00 & 3.33 & 5.00 & 3.00 & 4.67 \\
+Completeness (1--5) & 4.33 & 4.33 & 4.00 & 4.00 & 3.33 \\
+Playability (1--5) & 3.00 & 3.67 & 3.00 & 4.00 & 2.67 \\
+Balance (2/1/0, \%) & 0/100/0 & 67/33/0 & 67/0/33 & 67/0/33 & 33/67/0 \\
+Fun (2/1/0, \%) & 67/33/0 & 33/67/0 & 67/33/0 & 67/0/33 & 67/33/0 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Variant}} \\
+Task understanding (1--5) & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 \\
+Meaningful variant (2/1/0, \%) & 100/0/0 & 100/0/0 & 100/0/0 & 100/0/0 & 100/0/0 \\
+Consistency (1--5) & 2.67 & 3.00 & 3.00 & 2.33 & 2.67 \\
+Hallucination (1--5) & 5.00 & 4.67 & 4.67 & 5.00 & 4.33 \\
+Balance (2/1/0, \%) & 0/67/33 & 0/67/33 & 0/100/0 & 33/33/33 & 33/33/33 \\
+Fun (2/1/0, \%) & 33/67/0 & 100/0/0 & 33/67/0 & 33/67/0 & 67/33/0 \\
+\botrule
+\end{tabular}
+\end{table}

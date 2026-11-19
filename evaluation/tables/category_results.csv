@@ -1,0 +1,30 @@
+task,criterion,Abstract,Procedural,Exception-heavy,Thematic,Social/party
+Explain,Task understanding (1-5),4.53,4.89,4.64,4.92,4.75
+Explain,Coverage (1-5),3.36,2.86,2.89,2.22,2.78
+Explain,Consistency (1-5),3.06,3.19,3.14,2.86,3.00
+Explain,Hallucination (1-5),2.44,2.53,2.81,2.39,2.69
+Flaw Detection,Task understanding (1-5),3.86,3.83,3.75,3.81,3.67
+Flaw Detection,Recall,31%,18%,19%,10%,24%
+Flaw Detection,Recall: missing,22%,11%,14%,3%,28%
+Flaw Detection,Recall: ambiguous,39%,17%,36%,19%,31%
+Flaw Detection,Recall: inconsistent,33%,25%,6%,8%,14%
+Flaw Detection,Type correct (of detected),44%,47%,50%,64%,62%
+Flaw Detection,Exact fix (of detected),50%,5%,35%,0%,15%
+Flaw Detection,Partial or exact fix (of detected),65%,47%,70%,36%,38%
+Flaw Detection,Invented problems per answer,4.44,6.94,5.89,8.33,6.31
+Simulation,Task understanding (1-5),4.17,4.03,4.14,4.03,3.81
+Simulation,Move correctness: 2 / 1 / 0 (%),3 / 8 / 89,6 / 17 / 78,17 / 31 / 53,6 / 33 / 61,11 / 31 / 58
+Simulation,Consistency (1-5),1.72,1.69,2.03,2.11,1.94
+Simulation,Hallucination (1-5),2.36,2.56,3.00,2.58,3.08
+Generation of a New Game,Task understanding (1-5),4.58,4.67,4.50,4.75,4.75
+Generation of a New Game,Constraint adherence (1-5),3.67,3.08,3.58,2.92,3.75
+Generation of a New Game,Completeness (1-5),3.17,3.08,3.17,3.00,2.50
+Generation of a New Game,Playability (1-5),2.58,2.83,2.42,3.17,2.17
+Generation of a New Game,Balance: 2 / 1 / 0 (%),8 / 75 / 17,17 / 67 / 17,33 / 33 / 33,17 / 67 / 17,8 / 75 / 17
+Generation of a New Game,Fun: 2 / 1 / 0 (%),42 / 25 / 33,25 / 50 / 25,42 / 25 / 33,25 / 33 / 42,25 / 50 / 25
+Variant,Task understanding (1-5),4.75,4.33,4.67,4.67,4.50
+Variant,Meaningful variant: 2 / 1 / 0 (%),75 / 8 / 17,75 / 25 / 0,67 / 0 / 33,67 / 0 / 33,67 / 8 / 25
+Variant,Consistency (1-5),2.58,2.75,2.50,2.33,2.50
+Variant,Hallucination (1-5),4.17,4.42,4.25,4.42,4.33
+Variant,Balance: 2 / 1 / 0 (%),8 / 83 / 8,8 / 83 / 8,17 / 67 / 17,17 / 67 / 17,25 / 50 / 25
+Variant,Fun: 2 / 1 / 0 (%),33 / 42 / 25,50 / 33 / 17,25 / 42 / 33,33 / 42 / 25,33 / 42 / 25

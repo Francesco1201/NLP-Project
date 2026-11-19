@@ -1,0 +1,48 @@
+\begin{table}[htbp]
+\caption{Results of all criteria per task and game category, all models together. Criteria on a 1--5 scale are means; criteria on a 0--2 scale are the percentage of answers with score 2/1/0. Recall is the share of injected flaws detected; Type correct and fixes are computed on detected flaws; invented problems are a mean per answer.}\label{tab:category_results}%
+\footnotesize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Criterion} & \textbf{\shortstack[r]{Abstract}} & \textbf{\shortstack[r]{Procedural}} & \textbf{\shortstack[r]{Exception-\\heavy}} & \textbf{\shortstack[r]{Thematic}} & \textbf{\shortstack[r]{Social/\\party}} \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Explain}} \\
+Task understanding (1--5) & 4.53 & 4.89 & 4.64 & 4.92 & 4.75 \\
+Coverage (1--5) & 3.36 & 2.86 & 2.89 & 2.22 & 2.78 \\
+Consistency (1--5) & 3.06 & 3.19 & 3.14 & 2.86 & 3.00 \\
+Hallucination (1--5) & 2.44 & 2.53 & 2.81 & 2.39 & 2.69 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Flaw Detection}} \\
+Task understanding (1--5) & 3.86 & 3.83 & 3.75 & 3.81 & 3.67 \\
+Recall & 31\% & 18\% & 19\% & 10\% & 24\% \\
+\quad Missing & 22\% & 11\% & 14\% & 3\% & 28\% \\
+\quad Ambiguous & 39\% & 17\% & 36\% & 19\% & 31\% \\
+\quad Inconsistent & 33\% & 25\% & 6\% & 8\% & 14\% \\
+Type correct & 44\% & 47\% & 50\% & 64\% & 62\% \\
+Exact fix & 50\% & 5\% & 35\% & 0\% & 15\% \\
+Partial or exact fix & 65\% & 47\% & 70\% & 36\% & 38\% \\
+Invented problems & 4.44 & 6.94 & 5.89 & 8.33 & 6.31 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Simulation}} \\
+Task understanding (1--5) & 4.17 & 4.03 & 4.14 & 4.03 & 3.81 \\
+Move correctness (2/1/0, \%) & 3/8/89 & 6/17/78 & 17/31/53 & 6/33/61 & 11/31/58 \\
+Consistency (1--5) & 1.72 & 1.69 & 2.03 & 2.11 & 1.94 \\
+Hallucination (1--5) & 2.36 & 2.56 & 3.00 & 2.58 & 3.08 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Generation of a New Game}} \\
+Task understanding (1--5) & 4.58 & 4.67 & 4.50 & 4.75 & 4.75 \\
+Constraint adherence (1--5) & 3.67 & 3.08 & 3.58 & 2.92 & 3.75 \\
+Completeness (1--5) & 3.17 & 3.08 & 3.17 & 3.00 & 2.50 \\
+Playability (1--5) & 2.58 & 2.83 & 2.42 & 3.17 & 2.17 \\
+Balance (2/1/0, \%) & 8/75/17 & 17/67/17 & 33/33/33 & 17/67/17 & 8/75/17 \\
+Fun (2/1/0, \%) & 42/25/33 & 25/50/25 & 42/25/33 & 25/33/42 & 25/50/25 \\
+\midrule
+\multicolumn{6}{@{}l}{\textbf{Variant}} \\
+Task understanding (1--5) & 4.75 & 4.33 & 4.67 & 4.67 & 4.50 \\
+Meaningful variant (2/1/0, \%) & 75/8/17 & 75/25/0 & 67/0/33 & 67/0/33 & 67/8/25 \\
+Consistency (1--5) & 2.58 & 2.75 & 2.50 & 2.33 & 2.50 \\
+Hallucination (1--5) & 4.17 & 4.42 & 4.25 & 4.42 & 4.33 \\
+Balance (2/1/0, \%) & 8/83/8 & 8/83/8 & 17/67/17 & 17/67/17 & 25/50/25 \\
+Fun (2/1/0, \%) & 33/42/25 & 50/33/17 & 25/42/33 & 33/42/25 & 33/42/25 \\
+\botrule
+\end{tabular}
+\end{table}

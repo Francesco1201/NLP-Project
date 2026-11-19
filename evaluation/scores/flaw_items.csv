@@ -1,0 +1,543 @@
+outputId,model,category,game,iteration,flaw,flawType,detected,typeCorrect,fixQuality,notes
+A001,Llama-1B,Abstract deterministic,checkers,1,1,missing,1,1.0,1.0,"Punto 9: dice che le condizioni per l’incoronazione mancano e vanno indicate, ma senza dire quali sono (arrivare all’ultima riga)."
+A001,Llama-1B,Abstract deterministic,checkers,1,2,ambiguous,0,,,
+A001,Llama-1B,Abstract deterministic,checkers,1,3,inconsistent,0,,,
+A002,Llama-1B,Abstract deterministic,checkers,2,1,missing,0,,,
+A002,Llama-1B,Abstract deterministic,checkers,2,2,ambiguous,0,,,
+A002,Llama-1B,Abstract deterministic,checkers,2,3,inconsistent,0,,,
+A003,Llama-1B,Abstract deterministic,checkers,3,1,missing,1,0.0,0.0,"Punto 8: indica il passaggio sull’incoronazione, ma dice che avviene “after winning” e chiede come si mette la corona, non quando. Nessuna correzione."
+A003,Llama-1B,Abstract deterministic,checkers,3,2,ambiguous,0,,,
+A003,Llama-1B,Abstract deterministic,checkers,3,3,inconsistent,0,,,
+A004,Llama-1B,Abstract deterministic,connect-four,1,1,missing,0,,,
+A004,Llama-1B,Abstract deterministic,connect-four,1,2,ambiguous,1,1.0,1.0,"Punto 4 (ripreso al 9): nota che l’esito non è specificato. Correzione confusa: cita il pareggio ma anche regole inventate (tre dischi in fila, vincitore in base agli spazi vuoti)."
+A004,Llama-1B,Abstract deterministic,connect-four,1,3,inconsistent,1,0.0,0.0,"Punto 2: indica la frase “drops two discs per turn”, ma la legge come dubbio sull’alternanza dei turni, non come contraddizione. Correzione sbagliata (più turni di fila)."
+A005,Llama-1B,Abstract deterministic,connect-four,2,1,missing,0,,,
+A005,Llama-1B,Abstract deterministic,connect-four,2,2,ambiguous,1,1.0,1.0,Punto 4: dice che bisogna chiarire come finisce la partita a griglia piena senza vincitore. Va nella direzione giusta ma non dice esplicitamente pareggio.
+A005,Llama-1B,Abstract deterministic,connect-four,2,3,inconsistent,1,0.0,0.0,"Punto 3: indica la frase “two discs per turn”, ma chiede se vadano messi consecutivamente, senza vedere la contraddizione. Nessuna correzione."
+A006,Llama-1B,Abstract deterministic,connect-four,3,1,missing,0,,,
+A006,Llama-1B,Abstract deterministic,connect-four,3,2,ambiguous,1,1.0,0.0,"Punto 2: nota che non è specificato cosa succede a griglia piena. La correzione parla d’altro (vittoria con la linea) e la riscrittura peggiora la regola (“continues indefinitely”, criteri inventati)."
+A006,Llama-1B,Abstract deterministic,connect-four,3,3,inconsistent,0,,,
+A007,Llama-1B,Abstract deterministic,nine-mens-morris,1,1,missing,0,,,
+A007,Llama-1B,Abstract deterministic,nine-mens-morris,1,2,ambiguous,0,,,
+A007,Llama-1B,Abstract deterministic,nine-mens-morris,1,3,inconsistent,1,1.0,1.0,"Punto 2: chiama contradictory la frase “A piece may not jump another piece” e la correzione tiene il divieto, ma non nomina né toglie la frase inserita “may jump over an adjacent piece”."
+A008,Llama-1B,Abstract deterministic,nine-mens-morris,2,1,missing,0,,,
+A008,Llama-1B,Abstract deterministic,nine-mens-morris,2,2,ambiguous,0,,,
+A008,Llama-1B,Abstract deterministic,nine-mens-morris,2,3,inconsistent,0,,,
+A009,Llama-1B,Abstract deterministic,nine-mens-morris,3,1,missing,0,,,
+A009,Llama-1B,Abstract deterministic,nine-mens-morris,3,2,ambiguous,0,,,
+A009,Llama-1B,Abstract deterministic,nine-mens-morris,3,3,inconsistent,0,,,
+A010,Llama-1B,Low-interaction procedural,azul,1,1,missing,0,,,
+A010,Llama-1B,Low-interaction procedural,azul,1,2,ambiguous,0,,,
+A010,Llama-1B,Low-interaction procedural,azul,1,3,inconsistent,0,,,
+A011,Llama-1B,Low-interaction procedural,azul,2,1,missing,0,,,
+A011,Llama-1B,Low-interaction procedural,azul,2,2,ambiguous,0,,,
+A011,Llama-1B,Low-interaction procedural,azul,2,3,inconsistent,1,0.0,0.0,"	Punto 7: indica il punteggio delle colonne come problema, ma dice che mancano dettagli invece di vedere la contraddizione 7 punti / nessun bonus.
+Correzione generica (“clarify the scoring system”)."
+A012,Llama-1B,Low-interaction procedural,azul,3,1,missing,0,,,
+A012,Llama-1B,Low-interaction procedural,azul,3,2,ambiguous,0,,,
+A012,Llama-1B,Low-interaction procedural,azul,3,3,inconsistent,0,,,
+A013,Llama-1B,Low-interaction procedural,kingdomino,1,1,missing,1,0.0,0.0,"Punto 3: cita “Either connect it to your starting tile…” come regola problematica, ma la legge come contraddizione con lo scarto, senza vedere che manca la seconda opzione. Correzione senza senso."
+A013,Llama-1B,Low-interaction procedural,kingdomino,1,2,ambiguous,0,,,
+A013,Llama-1B,Low-interaction procedural,kingdomino,1,3,inconsistent,0,,,
+A014,Llama-1B,Low-interaction procedural,kingdomino,2,1,missing,1,1.0,0.0,Al punto 2 dice che non è chiaro come si collegano le tessere. La correzione non ha senso e la riscrittura lascia la regola incompleta.
+A014,Llama-1B,Low-interaction procedural,kingdomino,2,2,ambiguous,1,1.0,1.0,Al punto 3 dice che non è chiaro come si calcolano i punti. Correzione generica senza la formula.
+A014,Llama-1B,Low-interaction procedural,kingdomino,2,3,inconsistent,0,,,
+A015,Llama-1B,Low-interaction procedural,kingdomino,3,1,missing,0,,,
+A015,Llama-1B,Low-interaction procedural,kingdomino,3,2,ambiguous,0,,,
+A015,Llama-1B,Low-interaction procedural,kingdomino,3,3,inconsistent,0,,,
+A016,Llama-1B,Low-interaction procedural,ticket-to-ride,1,1,missing,0,,,
+A016,Llama-1B,Low-interaction procedural,ticket-to-ride,1,2,ambiguous,0,,,
+A016,Llama-1B,Low-interaction procedural,ticket-to-ride,1,3,inconsistent,1,1.0,0.0,"Punto 3: lo mette tra le incoerenze e cita il limite di una rotta per turno, ma la spiegazione si confonde con le doppie rotte. La correzione permette più rotte, cioè tiene la frase inserita."
+A017,Llama-1B,Low-interaction procedural,ticket-to-ride,2,1,missing,0,,,
+A017,Llama-1B,Low-interaction procedural,ticket-to-ride,2,2,ambiguous,0,,,
+A017,Llama-1B,Low-interaction procedural,ticket-to-ride,2,3,inconsistent,1,1.0,0.0,"Parte finale: nota esplicitamente la contraddizione tra una rotta e più rotte, ma non propone nessuna correzione."
+A018,Llama-1B,Low-interaction procedural,ticket-to-ride,3,1,missing,0,,,
+A018,Llama-1B,Low-interaction procedural,ticket-to-ride,3,2,ambiguous,0,,,
+A018,Llama-1B,Low-interaction procedural,ticket-to-ride,3,3,inconsistent,0,,,
+A019,Llama-1B,Exception-heavy rule systems,exploding-kittens,1,1,missing,0,,,
+A019,Llama-1B,Exception-heavy rule systems,exploding-kittens,1,2,ambiguous,0,,,
+A019,Llama-1B,Exception-heavy rule systems,exploding-kittens,1,3,inconsistent,0,,,
+A020,Llama-1B,Exception-heavy rule systems,exploding-kittens,2,1,missing,0,,,
+A020,Llama-1B,Exception-heavy rule systems,exploding-kittens,2,2,ambiguous,0,,,
+A020,Llama-1B,Exception-heavy rule systems,exploding-kittens,2,3,inconsistent,0,,,
+A021,Llama-1B,Exception-heavy rule systems,exploding-kittens,3,1,missing,1,1.0,0.0,"Punto 5: mette il Favor tra le carte il cui effetto non è descritto, ma insieme ad Attack e Skip che lo sono. Correzione generica e sbagliata per il Favor."
+A021,Llama-1B,Exception-heavy rule systems,exploding-kittens,3,2,ambiguous,0,,,
+A021,Llama-1B,Exception-heavy rule systems,exploding-kittens,3,3,inconsistent,0,,,
+A022,Llama-1B,Exception-heavy rule systems,mao,1,1,missing,0,,,
+A022,Llama-1B,Exception-heavy rule systems,mao,1,2,ambiguous,1,1.0,1.0,"Punto 4 (ripreso al 9): cita la frase e nota che non è spiegato come funziona la penalità. Correzione vicina (“giving a player a specific card”), ma non dice una carta dal mazzo."
+A022,Llama-1B,Exception-heavy rule systems,mao,1,3,inconsistent,0,,,
+A023,Llama-1B,Exception-heavy rule systems,mao,2,1,missing,0,,,
+A023,Llama-1B,Exception-heavy rule systems,mao,2,2,ambiguous,0,,,
+A023,Llama-1B,Exception-heavy rule systems,mao,2,3,inconsistent,0,,,
+A024,Llama-1B,Exception-heavy rule systems,mao,3,1,missing,0,,,
+A024,Llama-1B,Exception-heavy rule systems,mao,3,2,ambiguous,0,,,
+A024,Llama-1B,Exception-heavy rule systems,mao,3,3,inconsistent,0,,,
+A025,Llama-1B,Exception-heavy rule systems,uno,1,1,missing,0,,,
+A025,Llama-1B,Exception-heavy rule systems,uno,1,2,ambiguous,0,,,
+A025,Llama-1B,Exception-heavy rule systems,uno,1,3,inconsistent,0,,,
+A026,Llama-1B,Exception-heavy rule systems,uno,2,1,missing,0,,,
+A026,Llama-1B,Exception-heavy rule systems,uno,2,2,ambiguous,1,1.0,1.0,"Punto 1: nota che non è specificato quante carte riceve ogni giocatore (citando la frase sbagliata) e propone 7, ma aggiunge regole inventate (“6 additional cards… or take the entire top pile”)."
+A026,Llama-1B,Exception-heavy rule systems,uno,2,3,inconsistent,0,,,
+A027,Llama-1B,Exception-heavy rule systems,uno,3,1,missing,1,1.0,1.0,"Punto 7: nota che chi non dice “Uno!” non viene penalizzato e propone carte in più o un turno saltato. Direzione giusta, ma non dice due carte."
+A027,Llama-1B,Exception-heavy rule systems,uno,3,2,ambiguous,0,,,
+A027,Llama-1B,Exception-heavy rule systems,uno,3,3,inconsistent,0,,,
+A028,Llama-1B,Thematic with randomness,clue,1,1,missing,0,,,
+A028,Llama-1B,Thematic with randomness,clue,1,2,ambiguous,0,,,
+A028,Llama-1B,Thematic with randomness,clue,1,3,inconsistent,0,,,
+A029,Llama-1B,Thematic with randomness,clue,2,1,missing,0,,,
+A029,Llama-1B,Thematic with randomness,clue,2,2,ambiguous,0,,,
+A029,Llama-1B,Thematic with randomness,clue,2,3,inconsistent,0,,,
+A030,Llama-1B,Thematic with randomness,clue,3,1,missing,0,,,
+A030,Llama-1B,Thematic with randomness,clue,3,2,ambiguous,0,,,
+A030,Llama-1B,Thematic with randomness,clue,3,3,inconsistent,0,,,
+A031,Llama-1B,Thematic with randomness,forbidden-island,1,1,missing,0,,,
+A031,Llama-1B,Thematic with randomness,forbidden-island,1,2,ambiguous,0,,,
+A031,Llama-1B,Thematic with randomness,forbidden-island,1,3,inconsistent,0,,,
+A032,Llama-1B,Thematic with randomness,forbidden-island,2,1,missing,0,,,
+A032,Llama-1B,Thematic with randomness,forbidden-island,2,2,ambiguous,1,1.0,0.0,"Nota che il numero di carte non è indicato, ma risponde con domande (“4? 6? 12?”) senza proporre il numero."
+A032,Llama-1B,Thematic with randomness,forbidden-island,2,3,inconsistent,0,,,
+A033,Llama-1B,Thematic with randomness,forbidden-island,3,1,missing,0,,,
+A033,Llama-1B,Thematic with randomness,forbidden-island,3,2,ambiguous,0,,,
+A033,Llama-1B,Thematic with randomness,forbidden-island,3,3,inconsistent,0,,,
+A034,Llama-1B,Thematic with randomness,monopoly,1,1,missing,0,,,
+A034,Llama-1B,Thematic with randomness,monopoly,1,2,ambiguous,0,,,
+A034,Llama-1B,Thematic with randomness,monopoly,1,3,inconsistent,0,,,
+A035,Llama-1B,Thematic with randomness,monopoly,2,1,missing,0,,,
+A035,Llama-1B,Thematic with randomness,monopoly,2,2,ambiguous,1,0.0,0.0,"Punto 4: parla di incoerenze nel calcolo della tassa sul reddito, cioè la regola giusta, ma non nota che mancano gli importi. Correzione generica."
+A035,Llama-1B,Thematic with randomness,monopoly,2,3,inconsistent,0,,,
+A036,Llama-1B,Thematic with randomness,monopoly,3,1,missing,0,,,
+A036,Llama-1B,Thematic with randomness,monopoly,3,2,ambiguous,0,,,
+A036,Llama-1B,Thematic with randomness,monopoly,3,3,inconsistent,0,,,
+A037,Llama-1B,Social/party,dixit,1,1,missing,0,,,
+A037,Llama-1B,Social/party,dixit,1,2,ambiguous,0,,,
+A037,Llama-1B,Social/party,dixit,1,3,inconsistent,1,1.0,0.0,"Punto 4: vede le due condizioni di fine in conflitto, ma propone di tenere i 30 punti invece di togliere la frase inserita."
+A038,Llama-1B,Social/party,dixit,2,1,missing,0,,,
+A038,Llama-1B,Social/party,dixit,2,2,ambiguous,0,,,
+A038,Llama-1B,Social/party,dixit,2,3,inconsistent,1,0.0,0.0,"Punto 9: cita le due condizioni ma propone regole per ricominciare la partita a 30 punti, senza vedere il conflitto."
+A039,Llama-1B,Social/party,dixit,3,1,missing,0,,,
+A039,Llama-1B,Social/party,dixit,3,2,ambiguous,0,,,
+A039,Llama-1B,Social/party,dixit,3,3,inconsistent,0,,,
+A040,Llama-1B,Social/party,the_resistance,1,1,missing,0,,,
+A040,Llama-1B,Social/party,the_resistance,1,2,ambiguous,0,,,
+A040,Llama-1B,Social/party,the_resistance,1,3,inconsistent,0,,,
+A041,Llama-1B,Social/party,the_resistance,2,1,missing,0,,,
+A041,Llama-1B,Social/party,the_resistance,2,2,ambiguous,0,,,
+A041,Llama-1B,Social/party,the_resistance,2,3,inconsistent,0,,,
+A042,Llama-1B,Social/party,the_resistance,3,1,missing,0,,,
+A042,Llama-1B,Social/party,the_resistance,3,2,ambiguous,0,,,
+A042,Llama-1B,Social/party,the_resistance,3,3,inconsistent,0,,,
+A043,Llama-1B,Social/party,werewolf,1,1,missing,1,0.0,0.0,"Punto 4: indica la descrizione della cura come imprecisa, ma non dice che manca l’effetto; correzione sbagliata (il Dottore cura sé stesso)."
+A043,Llama-1B,Social/party,werewolf,1,2,ambiguous,0,,,
+A043,Llama-1B,Social/party,werewolf,1,3,inconsistent,0,,,
+A044,Llama-1B,Social/party,werewolf,2,1,missing,0,,,
+A044,Llama-1B,Social/party,werewolf,2,2,ambiguous,1,1.0,0.0,"Punto 1: nota che non è indicato il numero di giocatori, ma propone 9, 11 o 13 (“I assume 11 is intended”) invece di almeno 7."
+A044,Llama-1B,Social/party,werewolf,2,3,inconsistent,0,,,
+A045,Llama-1B,Social/party,werewolf,3,1,missing,0,,,
+A045,Llama-1B,Social/party,werewolf,3,2,ambiguous,0,,,
+A045,Llama-1B,Social/party,werewolf,3,3,inconsistent,0,,,
+A046,Mistral-7B,Abstract deterministic,checkers,1,1,missing,0,,,
+A046,Mistral-7B,Abstract deterministic,checkers,1,2,ambiguous,0,,,
+A046,Mistral-7B,Abstract deterministic,checkers,1,3,inconsistent,0,,,
+A047,Mistral-7B,Abstract deterministic,checkers,2,1,missing,0,,,
+A047,Mistral-7B,Abstract deterministic,checkers,2,2,ambiguous,0,,,
+A047,Mistral-7B,Abstract deterministic,checkers,2,3,inconsistent,0,,,
+A048,Mistral-7B,Abstract deterministic,checkers,3,1,missing,1,0.0,0.0,"Punto 5: indica il passaggio “It is marked by placing an additional piece”, ma chiede cosa succede quando un pezzo diventa re e quali poteri ha (già elencati), non quando lo diventa. Nessuna correzione utile."
+A048,Mistral-7B,Abstract deterministic,checkers,3,2,ambiguous,0,,,
+A048,Mistral-7B,Abstract deterministic,checkers,3,3,inconsistent,0,,,
+A049,Mistral-7B,Abstract deterministic,connect-four,1,1,missing,0,,,
+A049,Mistral-7B,Abstract deterministic,connect-four,1,2,ambiguous,1,0.0,2.0,Punto 2: nota che non è detto cosa succede a griglia piena e propone esattamente il pareggio.
+A049,Mistral-7B,Abstract deterministic,connect-four,1,3,inconsistent,1,0.0,0.0,"Punto 1: vede che il testo dice sia uno sia due dischi. Lo etichetta come “ambiguous”, ma descrive due regole in conflitto. Correzione sbagliata: tiene i due dischi invece di togliere la frase inserita."
+A050,Mistral-7B,Abstract deterministic,connect-four,2,1,missing,0,,,
+A050,Mistral-7B,Abstract deterministic,connect-four,2,2,ambiguous,1,0.0,2.0,Punto 2: nota che non è detto come finisce la partita a griglia piena e propone il pareggio.
+A050,Mistral-7B,Abstract deterministic,connect-four,2,3,inconsistent,1,0.0,0.0,"Punto 1: propone di sostituire “one disc” con “two discs”, quindi ha visto il conflitto, ma corregge nel senso sbagliato."
+A051,Mistral-7B,Abstract deterministic,connect-four,3,1,missing,0,,,
+A051,Mistral-7B,Abstract deterministic,connect-four,3,2,ambiguous,1,0.0,2.0,Punto 2: nota che non è detto cosa succede a griglia piena e propone il pareggio.
+A051,Mistral-7B,Abstract deterministic,connect-four,3,3,inconsistent,1,0.0,2.0,Punto 1: cita le due frasi in conflitto (lo etichetta “ambiguous” ma descrive il conflitto) e propone di togliere quella inserita.
+A052,Mistral-7B,Abstract deterministic,nine-mens-morris,1,1,missing,0,,,
+A052,Mistral-7B,Abstract deterministic,nine-mens-morris,1,2,ambiguous,1,0.0,2.0,"Punto 1: nota che non è specificato quanti pezzi ha ogni giocatore e propone nove. Lo etichetta missing, ma descrive proprio il numero non specificato."
+A052,Mistral-7B,Abstract deterministic,nine-mens-morris,1,3,inconsistent,0,,,
+A053,Mistral-7B,Abstract deterministic,nine-mens-morris,2,1,missing,0,,,
+A053,Mistral-7B,Abstract deterministic,nine-mens-morris,2,2,ambiguous,0,,,
+A053,Mistral-7B,Abstract deterministic,nine-mens-morris,2,3,inconsistent,0,,,
+A054,Mistral-7B,Abstract deterministic,nine-mens-morris,3,1,missing,0,,,
+A054,Mistral-7B,Abstract deterministic,nine-mens-morris,3,2,ambiguous,1,0.0,1.0,"Punto 3: nota che non è specificato il numero iniziale di pezzi. Correzione generica, senza indicare nove."
+A054,Mistral-7B,Abstract deterministic,nine-mens-morris,3,3,inconsistent,0,,,
+A055,Mistral-7B,Low-interaction procedural,azul,1,1,missing,0,,,
+A055,Mistral-7B,Low-interaction procedural,azul,1,2,ambiguous,0,,,
+A055,Mistral-7B,Low-interaction procedural,azul,1,3,inconsistent,0,,,
+A056,Mistral-7B,Low-interaction procedural,azul,2,1,missing,0,,,
+A056,Mistral-7B,Low-interaction procedural,azul,2,2,ambiguous,0,,,
+A056,Mistral-7B,Low-interaction procedural,azul,2,3,inconsistent,1,1.0,1.0,"Punto 8: cita la frase inserita e la chiama incoerenza, ma la mette a confronto con il bonus orizzontale invece che con i 7 punti, e la attribuisce alla variante.
+Una delle due correzioni proposte (dare punti anche alle colonne) va nella direzione giusta, l’altra no."
+A057,Mistral-7B,Low-interaction procedural,azul,3,1,missing,0,,,
+A057,Mistral-7B,Low-interaction procedural,azul,3,2,ambiguous,0,,,
+A057,Mistral-7B,Low-interaction procedural,azul,3,3,inconsistent,1,0.0,1.0,"Punto 7: lo segnala come regola mancante, non come contraddizione. La correzione (dare un bonus alle colonne) va nella direzione giusta, ma non indica i 7 punti."
+A058,Mistral-7B,Low-interaction procedural,kingdomino,1,1,missing,0,,,
+A058,Mistral-7B,Low-interaction procedural,kingdomino,1,2,ambiguous,0,,,
+A058,Mistral-7B,Low-interaction procedural,kingdomino,1,3,inconsistent,0,,,
+A059,Mistral-7B,Low-interaction procedural,kingdomino,2,1,missing,0,,,
+A059,Mistral-7B,Low-interaction procedural,kingdomino,2,2,ambiguous,0,,,
+A059,Mistral-7B,Low-interaction procedural,kingdomino,2,3,inconsistent,0,,,
+A060,Mistral-7B,Low-interaction procedural,kingdomino,3,1,missing,1,1.0,1.0,Punto 2: nota che la regola parla solo della tessera iniziale e chiede se si può collegare al resto del regno. Lo etichetta “ambiguous” ma descrive un’opzione mancante. Correzione parziale: manca il vincolo del paesaggio uguale.
+A060,Mistral-7B,Low-interaction procedural,kingdomino,3,2,ambiguous,1,0.0,1.0,"Punto 5: nota che non è detto come le corone influiscono sui punti in base alla grandezza. Correzione generica, senza la moltiplicazione."
+A060,Mistral-7B,Low-interaction procedural,kingdomino,3,3,inconsistent,0,,,
+A061,Mistral-7B,Low-interaction procedural,ticket-to-ride,1,1,missing,0,,,
+A061,Mistral-7B,Low-interaction procedural,ticket-to-ride,1,2,ambiguous,0,,,
+A061,Mistral-7B,Low-interaction procedural,ticket-to-ride,1,3,inconsistent,1,1.0,2.0,Punto 3: cita entrambe le frasi in conflitto e propone di tenere una sola rotta per turno.
+A062,Mistral-7B,Low-interaction procedural,ticket-to-ride,2,1,missing,0,,,
+A062,Mistral-7B,Low-interaction procedural,ticket-to-ride,2,2,ambiguous,0,,,
+A062,Mistral-7B,Low-interaction procedural,ticket-to-ride,2,3,inconsistent,0,,,
+A063,Mistral-7B,Low-interaction procedural,ticket-to-ride,3,1,missing,0,,,
+A063,Mistral-7B,Low-interaction procedural,ticket-to-ride,3,2,ambiguous,0,,,
+A063,Mistral-7B,Low-interaction procedural,ticket-to-ride,3,3,inconsistent,0,,,
+A064,Mistral-7B,Exception-heavy rule systems,exploding-kittens,1,1,missing,0,,,
+A064,Mistral-7B,Exception-heavy rule systems,exploding-kittens,1,2,ambiguous,0,,,
+A064,Mistral-7B,Exception-heavy rule systems,exploding-kittens,1,3,inconsistent,0,,,
+A065,Mistral-7B,Exception-heavy rule systems,exploding-kittens,2,1,missing,0,,,
+A065,Mistral-7B,Exception-heavy rule systems,exploding-kittens,2,2,ambiguous,0,,,
+A065,Mistral-7B,Exception-heavy rule systems,exploding-kittens,2,3,inconsistent,0,,,
+A066,Mistral-7B,Exception-heavy rule systems,exploding-kittens,3,1,missing,0,,,
+A066,Mistral-7B,Exception-heavy rule systems,exploding-kittens,3,2,ambiguous,1,1.0,1.0,"Punto 5: nota che non è specificato quante carte si guardano. La correzione dice di specificarlo, ma non indica 3."
+A066,Mistral-7B,Exception-heavy rule systems,exploding-kittens,3,3,inconsistent,0,,,
+A067,Mistral-7B,Exception-heavy rule systems,mao,1,1,missing,0,,,
+A067,Mistral-7B,Exception-heavy rule systems,mao,1,2,ambiguous,0,,,
+A067,Mistral-7B,Exception-heavy rule systems,mao,1,3,inconsistent,0,,,
+A068,Mistral-7B,Exception-heavy rule systems,mao,2,1,missing,0,,,
+A068,Mistral-7B,Exception-heavy rule systems,mao,2,2,ambiguous,0,,,
+A068,Mistral-7B,Exception-heavy rule systems,mao,2,3,inconsistent,0,,,
+A069,Mistral-7B,Exception-heavy rule systems,mao,3,1,missing,0,,,
+A069,Mistral-7B,Exception-heavy rule systems,mao,3,2,ambiguous,0,,,
+A069,Mistral-7B,Exception-heavy rule systems,mao,3,3,inconsistent,0,,,
+A070,Mistral-7B,Exception-heavy rule systems,uno,1,1,missing,0,,,
+A070,Mistral-7B,Exception-heavy rule systems,uno,1,2,ambiguous,0,,,
+A070,Mistral-7B,Exception-heavy rule systems,uno,1,3,inconsistent,0,,,
+A071,Mistral-7B,Exception-heavy rule systems,uno,2,1,missing,0,,,
+A071,Mistral-7B,Exception-heavy rule systems,uno,2,2,ambiguous,0,,,
+A071,Mistral-7B,Exception-heavy rule systems,uno,2,3,inconsistent,1,1.0,2.0,"Punto 3: indica la frase inserita come incoerente e corregge lo Skip in “skips the next player’s turn”. Motiva con le regole standard di Uno, non con l’altra frase del testo."
+A072,Mistral-7B,Exception-heavy rule systems,uno,3,1,missing,0,,,
+A072,Mistral-7B,Exception-heavy rule systems,uno,3,2,ambiguous,1,0.0,2.0,Punto 1: nota che non è indicato quante carte si distribuiscono e propone sette.
+A072,Mistral-7B,Exception-heavy rule systems,uno,3,3,inconsistent,0,,,
+A073,Mistral-7B,Thematic with randomness,clue,1,1,missing,0,,,
+A073,Mistral-7B,Thematic with randomness,clue,1,2,ambiguous,0,,,
+A073,Mistral-7B,Thematic with randomness,clue,1,3,inconsistent,0,,,
+A074,Mistral-7B,Thematic with randomness,clue,2,1,missing,0,,,
+A074,Mistral-7B,Thematic with randomness,clue,2,2,ambiguous,0,,,
+A074,Mistral-7B,Thematic with randomness,clue,2,3,inconsistent,0,,,
+A075,Mistral-7B,Thematic with randomness,clue,3,1,missing,0,,,
+A075,Mistral-7B,Thematic with randomness,clue,3,2,ambiguous,0,,,
+A075,Mistral-7B,Thematic with randomness,clue,3,3,inconsistent,0,,,
+A076,Mistral-7B,Thematic with randomness,forbidden-island,1,1,missing,0,,,
+A076,Mistral-7B,Thematic with randomness,forbidden-island,1,2,ambiguous,0,,,
+A076,Mistral-7B,Thematic with randomness,forbidden-island,1,3,inconsistent,0,,,
+A077,Mistral-7B,Thematic with randomness,forbidden-island,2,1,missing,0,,,
+A077,Mistral-7B,Thematic with randomness,forbidden-island,2,2,ambiguous,0,,,
+A077,Mistral-7B,Thematic with randomness,forbidden-island,2,3,inconsistent,0,,,
+A078,Mistral-7B,Thematic with randomness,forbidden-island,3,1,missing,0,,,
+A078,Mistral-7B,Thematic with randomness,forbidden-island,3,2,ambiguous,0,,,
+A078,Mistral-7B,Thematic with randomness,forbidden-island,3,3,inconsistent,0,,,
+A079,Mistral-7B,Thematic with randomness,monopoly,1,1,missing,0,,,
+A079,Mistral-7B,Thematic with randomness,monopoly,1,2,ambiguous,1,0.0,1.0,"Punto 6: dice che non è spiegato come si calcolano le tasse (vero per la tassa sul reddito), ma insieme a multe, prestiti e interessi che sono spiegati. Correzione generica, senza importi."
+A079,Mistral-7B,Thematic with randomness,monopoly,1,3,inconsistent,0,,,
+A080,Mistral-7B,Thematic with randomness,monopoly,2,1,missing,0,,,
+A080,Mistral-7B,Thematic with randomness,monopoly,2,2,ambiguous,1,1.0,1.0,"Punto 9: nota che la tassa sul reddito non è chiara. Lo legge come dubbio su quale dei due si paghi, senza chiedere gli importi. Correzione generica."
+A080,Mistral-7B,Thematic with randomness,monopoly,2,3,inconsistent,0,,,
+A081,Mistral-7B,Thematic with randomness,monopoly,3,1,missing,0,,,
+A081,Mistral-7B,Thematic with randomness,monopoly,3,2,ambiguous,1,1.0,0.0,"Punto 8: cita la frase inserita e nota che non indica importo né percentuale, ma la attribuisce alle carte Chance e Community Chest. Correzione sbagliata (limiti minimi e massimi invece dei valori della tassa)."
+A081,Mistral-7B,Thematic with randomness,monopoly,3,3,inconsistent,0,,,
+A082,Mistral-7B,Social/party,dixit,1,1,missing,0,,,
+A082,Mistral-7B,Social/party,dixit,1,2,ambiguous,0,,,
+A082,Mistral-7B,Social/party,dixit,1,3,inconsistent,0,,,
+A083,Mistral-7B,Social/party,dixit,2,1,missing,0,,,
+A083,Mistral-7B,Social/party,dixit,2,2,ambiguous,0,,,
+A083,Mistral-7B,Social/party,dixit,2,3,inconsistent,0,,,
+A084,Mistral-7B,Social/party,dixit,3,1,missing,0,,,
+A084,Mistral-7B,Social/party,dixit,3,2,ambiguous,0,,,
+A084,Mistral-7B,Social/party,dixit,3,3,inconsistent,0,,,
+A085,Mistral-7B,Social/party,the_resistance,1,1,missing,1,1.0,2.0,Punto 1: nota che non è detto cosa succede con un pareggio e propone esattamente il rifiuto.
+A085,Mistral-7B,Social/party,the_resistance,1,2,ambiguous,1,1.0,1.0,Punto 5: cita la frase e nota che non è chiaro quali missioni richiedano più carte Fail. Correzione generica (“based on the number of players or the type of mission”).
+A085,Mistral-7B,Social/party,the_resistance,1,3,inconsistent,0,,,
+A086,Mistral-7B,Social/party,the_resistance,2,1,missing,0,,,
+A086,Mistral-7B,Social/party,the_resistance,2,2,ambiguous,1,1.0,1.0,Punto 1: cita la frase e nota che non è indicato quante carte Fail servono. Correzione generica (non indica la 4ª missione con 7+ giocatori).
+A086,Mistral-7B,Social/party,the_resistance,2,3,inconsistent,1,1.0,0.0,"Punto 3: cita entrambe le frasi in conflitto, ma corregge tenendo quella inserita (“they may choose to play a Mission Fail card”)."
+A087,Mistral-7B,Social/party,the_resistance,3,1,missing,1,1.0,2.0,Punto 6: nota che non è detto cosa succede con un pareggio e propone il rifiuto.
+A087,Mistral-7B,Social/party,the_resistance,3,2,ambiguous,1,1.0,1.0,Punto 7: cita la frase e nota che non è chiaro quando servono più carte Fail. Correzione generica.
+A087,Mistral-7B,Social/party,the_resistance,3,3,inconsistent,0,,,
+A088,Mistral-7B,Social/party,werewolf,1,1,missing,0,,,
+A088,Mistral-7B,Social/party,werewolf,1,2,ambiguous,1,0.0,2.0,Punto 1: nota che non è indicato il numero minimo di giocatori e propone almeno 7.
+A088,Mistral-7B,Social/party,werewolf,1,3,inconsistent,1,0.0,1.0,"Punto 6: indica la vittoria dei lupi come poco chiara e corregge con la parità (regola giusta), ma per un’ambiguità inventata (“potential Werewolves”), senza vedere né togliere la frase inserita."
+A089,Mistral-7B,Social/party,werewolf,2,1,missing,0,,,
+A089,Mistral-7B,Social/party,werewolf,2,2,ambiguous,0,,,
+A089,Mistral-7B,Social/party,werewolf,2,3,inconsistent,0,,,
+A090,Mistral-7B,Social/party,werewolf,3,1,missing,0,,,
+A090,Mistral-7B,Social/party,werewolf,3,2,ambiguous,1,1.0,1.0,"Punto 2: nota che non è indicato un numero minimo di giocatori. Correzione generica, senza indicare 7."
+A090,Mistral-7B,Social/party,werewolf,3,3,inconsistent,0,,,
+A091,Qwen,Abstract deterministic,checkers,1,1,missing,0,,,
+A091,Qwen,Abstract deterministic,checkers,1,2,ambiguous,0,,,
+A091,Qwen,Abstract deterministic,checkers,1,3,inconsistent,0,,,
+A092,Qwen,Abstract deterministic,checkers,2,1,missing,0,,,
+A092,Qwen,Abstract deterministic,checkers,2,2,ambiguous,0,,,
+A092,Qwen,Abstract deterministic,checkers,2,3,inconsistent,0,,,
+A093,Qwen,Abstract deterministic,checkers,3,1,missing,0,,,
+A093,Qwen,Abstract deterministic,checkers,3,2,ambiguous,0,,,
+A093,Qwen,Abstract deterministic,checkers,3,3,inconsistent,0,,,
+A094,Qwen,Abstract deterministic,connect-four,1,1,missing,0,,,
+A094,Qwen,Abstract deterministic,connect-four,1,2,ambiguous,0,,,
+A094,Qwen,Abstract deterministic,connect-four,1,3,inconsistent,0,,,
+A095,Qwen,Abstract deterministic,connect-four,2,1,missing,0,,,
+A095,Qwen,Abstract deterministic,connect-four,2,2,ambiguous,1,0.0,0.0,"Lo mette sotto Inconsistent Rule, ma descrive un’ambiguità. Non è specificato come si decide. Cita il pareggio come ipotesi, ma non lo propone, e la riscrittura lascia la frase uguale."
+A095,Qwen,Abstract deterministic,connect-four,2,3,inconsistent,0,,,
+A096,Qwen,Abstract deterministic,connect-four,3,1,missing,0,,,
+A096,Qwen,Abstract deterministic,connect-four,3,2,ambiguous,0,,,
+A096,Qwen,Abstract deterministic,connect-four,3,3,inconsistent,0,,,
+A097,Qwen,Abstract deterministic,nine-mens-morris,1,1,missing,0,,,
+A097,Qwen,Abstract deterministic,nine-mens-morris,1,2,ambiguous,0,,,
+A097,Qwen,Abstract deterministic,nine-mens-morris,1,3,inconsistent,1,0.0,0.0,"Punto 8: dice che non è chiaro se il movimento includa il salto, ma lo descrive come confusione generica (anche “physical actions”), senza indicare le due frasi in conflitto. Nessuna correzione."
+A098,Qwen,Abstract deterministic,nine-mens-morris,2,1,missing,0,,,
+A098,Qwen,Abstract deterministic,nine-mens-morris,2,2,ambiguous,0,,,
+A098,Qwen,Abstract deterministic,nine-mens-morris,2,3,inconsistent,0,,,
+A099,Qwen,Abstract deterministic,nine-mens-morris,3,1,missing,0,,,
+A099,Qwen,Abstract deterministic,nine-mens-morris,3,2,ambiguous,0,,,
+A099,Qwen,Abstract deterministic,nine-mens-morris,3,3,inconsistent,0,,,
+A100,Qwen,Low-interaction procedural,azul,1,1,missing,0,,,
+A100,Qwen,Low-interaction procedural,azul,1,2,ambiguous,0,,,
+A100,Qwen,Low-interaction procedural,azul,1,3,inconsistent,0,,,
+A101,Qwen,Low-interaction procedural,azul,2,1,missing,0,,,
+A101,Qwen,Low-interaction procedural,azul,2,2,ambiguous,0,,,
+A101,Qwen,Low-interaction procedural,azul,2,3,inconsistent,0,,,
+A102,Qwen,Low-interaction procedural,azul,3,1,missing,0,,,
+A102,Qwen,Low-interaction procedural,azul,3,2,ambiguous,0,,,
+A102,Qwen,Low-interaction procedural,azul,3,3,inconsistent,0,,,
+A103,Qwen,Low-interaction procedural,kingdomino,1,1,missing,0,,,
+A103,Qwen,Low-interaction procedural,kingdomino,1,2,ambiguous,0,,,
+A103,Qwen,Low-interaction procedural,kingdomino,1,3,inconsistent,0,,,
+A104,Qwen,Low-interaction procedural,kingdomino,2,1,missing,0,,,
+A104,Qwen,Low-interaction procedural,kingdomino,2,2,ambiguous,0,,,
+A104,Qwen,Low-interaction procedural,kingdomino,2,3,inconsistent,0,,,
+A105,Qwen,Low-interaction procedural,kingdomino,3,1,missing,0,,,
+A105,Qwen,Low-interaction procedural,kingdomino,3,2,ambiguous,0,,,
+A105,Qwen,Low-interaction procedural,kingdomino,3,3,inconsistent,0,,,
+A106,Qwen,Low-interaction procedural,ticket-to-ride,1,1,missing,0,,,
+A106,Qwen,Low-interaction procedural,ticket-to-ride,1,2,ambiguous,1,0.0,1.0,"Cita “getting low” e chiede di chiarire la condizione di fine partita (lo mette sotto “Inconsistent”, ma descrive un’ambiguità). Correzione generica, senza la soglia."
+A106,Qwen,Low-interaction procedural,ticket-to-ride,1,3,inconsistent,0,,,
+A107,Qwen,Low-interaction procedural,ticket-to-ride,2,1,missing,0,,,
+A107,Qwen,Low-interaction procedural,ticket-to-ride,2,2,ambiguous,0,,,
+A107,Qwen,Low-interaction procedural,ticket-to-ride,2,3,inconsistent,1,0.0,1.0,"Cita entrambe le frasi in conflitto (lo etichetta “ambiguous”, ma descrive il conflitto). La correzione chiede di chiarire senza scegliere una rotta per turno."
+A108,Qwen,Low-interaction procedural,ticket-to-ride,3,1,missing,0,,,
+A108,Qwen,Low-interaction procedural,ticket-to-ride,3,2,ambiguous,0,,,
+A108,Qwen,Low-interaction procedural,ticket-to-ride,3,3,inconsistent,0,,,
+A109,Qwen,Exception-heavy rule systems,exploding-kittens,1,1,missing,0,,,
+A109,Qwen,Exception-heavy rule systems,exploding-kittens,1,2,ambiguous,0,,,
+A109,Qwen,Exception-heavy rule systems,exploding-kittens,1,3,inconsistent,0,,,
+A110,Qwen,Exception-heavy rule systems,exploding-kittens,2,1,missing,0,,,
+A110,Qwen,Exception-heavy rule systems,exploding-kittens,2,2,ambiguous,0,,,
+A110,Qwen,Exception-heavy rule systems,exploding-kittens,2,3,inconsistent,0,,,
+A111,Qwen,Exception-heavy rule systems,exploding-kittens,3,1,missing,0,,,
+A111,Qwen,Exception-heavy rule systems,exploding-kittens,3,2,ambiguous,0,,,
+A111,Qwen,Exception-heavy rule systems,exploding-kittens,3,3,inconsistent,0,,,
+A112,Qwen,Exception-heavy rule systems,mao,1,1,missing,0,,,
+A112,Qwen,Exception-heavy rule systems,mao,1,2,ambiguous,1,0.0,0.0,"Dice che le penalità per chi viola le regole non sono specificate. Lo chiama missing ma descrive la mancanza della penalità precisa. Correzione confusa (mescolata con il Point of Order), senza una carta dal mazzo."
+A112,Qwen,Exception-heavy rule systems,mao,1,3,inconsistent,0,,,
+A113,Qwen,Exception-heavy rule systems,mao,2,1,missing,0,,,
+A113,Qwen,Exception-heavy rule systems,mao,2,2,ambiguous,1,0.0,1.0,"Problema 4: dice che mancano regole specifiche per dare una carta di penalità. Correzione generica, senza una carta dal mazzo."
+A113,Qwen,Exception-heavy rule systems,mao,2,3,inconsistent,0,,,
+A114,Qwen,Exception-heavy rule systems,mao,3,1,missing,0,,,
+A114,Qwen,Exception-heavy rule systems,mao,3,2,ambiguous,0,,,
+A114,Qwen,Exception-heavy rule systems,mao,3,3,inconsistent,0,,,
+A115,Qwen,Exception-heavy rule systems,uno,1,1,missing,0,,,
+A115,Qwen,Exception-heavy rule systems,uno,1,2,ambiguous,0,,,
+A115,Qwen,Exception-heavy rule systems,uno,1,3,inconsistent,0,,,
+A116,Qwen,Exception-heavy rule systems,uno,2,1,missing,0,,,
+A116,Qwen,Exception-heavy rule systems,uno,2,2,ambiguous,0,,,
+A116,Qwen,Exception-heavy rule systems,uno,2,3,inconsistent,0,,,
+A117,Qwen,Exception-heavy rule systems,uno,3,1,missing,0,,,
+A117,Qwen,Exception-heavy rule systems,uno,3,2,ambiguous,0,,,
+A117,Qwen,Exception-heavy rule systems,uno,3,3,inconsistent,0,,,
+A118,Qwen,Thematic with randomness,clue,1,1,missing,0,,,
+A118,Qwen,Thematic with randomness,clue,1,2,ambiguous,0,,,
+A118,Qwen,Thematic with randomness,clue,1,3,inconsistent,0,,,
+A119,Qwen,Thematic with randomness,clue,2,1,missing,0,,,
+A119,Qwen,Thematic with randomness,clue,2,2,ambiguous,0,,,
+A119,Qwen,Thematic with randomness,clue,2,3,inconsistent,0,,,
+A120,Qwen,Thematic with randomness,clue,3,1,missing,0,,,
+A120,Qwen,Thematic with randomness,clue,3,2,ambiguous,0,,,
+A120,Qwen,Thematic with randomness,clue,3,3,inconsistent,0,,,
+A121,Qwen,Thematic with randomness,forbidden-island,1,1,missing,0,,,
+A121,Qwen,Thematic with randomness,forbidden-island,1,2,ambiguous,1,1.0,0.0,"Punto 9: dice che la regola del limite di mano va chiarita, ma il motivo è sbagliato e non nota che manca il numero. Correzione inventata."
+A121,Qwen,Thematic with randomness,forbidden-island,1,3,inconsistent,0,,,
+A122,Qwen,Thematic with randomness,forbidden-island,2,1,missing,0,,,
+A122,Qwen,Thematic with randomness,forbidden-island,2,2,ambiguous,0,,,
+A122,Qwen,Thematic with randomness,forbidden-island,2,3,inconsistent,0,,,
+A123,Qwen,Thematic with randomness,forbidden-island,3,1,missing,0,,,
+A123,Qwen,Thematic with randomness,forbidden-island,3,2,ambiguous,0,,,
+A123,Qwen,Thematic with randomness,forbidden-island,3,3,inconsistent,0,,,
+A124,Qwen,Thematic with randomness,monopoly,1,1,missing,0,,,
+A124,Qwen,Thematic with randomness,monopoly,1,2,ambiguous,0,,,
+A124,Qwen,Thematic with randomness,monopoly,1,3,inconsistent,0,,,
+A125,Qwen,Thematic with randomness,monopoly,2,1,missing,0,,,
+A125,Qwen,Thematic with randomness,monopoly,2,2,ambiguous,0,,,
+A125,Qwen,Thematic with randomness,monopoly,2,3,inconsistent,0,,,
+A126,Qwen,Thematic with randomness,monopoly,3,1,missing,0,,,
+A126,Qwen,Thematic with randomness,monopoly,3,2,ambiguous,0,,,
+A126,Qwen,Thematic with randomness,monopoly,3,3,inconsistent,0,,,
+A127,Qwen,Social/party,dixit,1,1,missing,0,,,
+A127,Qwen,Social/party,dixit,1,2,ambiguous,0,,,
+A127,Qwen,Social/party,dixit,1,3,inconsistent,0,,,
+A128,Qwen,Social/party,dixit,2,1,missing,0,,,
+A128,Qwen,Social/party,dixit,2,2,ambiguous,1,1.0,0.0,"Cita la frase “score some points” tra le regole ambigue, ma descrive l’ambiguità in modo confuso (contribution rate) e non dice che manca il numero di punti. Correzione senza senso."
+A128,Qwen,Social/party,dixit,2,3,inconsistent,0,,,
+A129,Qwen,Social/party,dixit,3,1,missing,0,,,
+A129,Qwen,Social/party,dixit,3,2,ambiguous,0,,,
+A129,Qwen,Social/party,dixit,3,3,inconsistent,0,,,
+A130,Qwen,Social/party,the_resistance,1,1,missing,0,,,
+A130,Qwen,Social/party,the_resistance,1,2,ambiguous,0,,,
+A130,Qwen,Social/party,the_resistance,1,3,inconsistent,0,,,
+A131,Qwen,Social/party,the_resistance,2,1,missing,1,1.0,0.0,"Indica come poco chiari i criteri di rifiuto della squadra, ma dice che manca la maggioranza (che invece c’è) e non nomina la parità. Correzione generica."
+A131,Qwen,Social/party,the_resistance,2,2,ambiguous,0,,,
+A131,Qwen,Social/party,the_resistance,2,3,inconsistent,0,,,
+A132,Qwen,Social/party,the_resistance,3,1,missing,0,,,
+A132,Qwen,Social/party,the_resistance,3,2,ambiguous,0,,,
+A132,Qwen,Social/party,the_resistance,3,3,inconsistent,0,,,
+A133,Qwen,Social/party,werewolf,1,1,missing,0,,,
+A133,Qwen,Social/party,werewolf,1,2,ambiguous,0,,,
+A133,Qwen,Social/party,werewolf,1,3,inconsistent,0,,,
+A134,Qwen,Social/party,werewolf,2,1,missing,0,,,
+A134,Qwen,Social/party,werewolf,2,2,ambiguous,0,,,
+A134,Qwen,Social/party,werewolf,2,3,inconsistent,0,,,
+A135,Qwen,Social/party,werewolf,3,1,missing,1,0.0,0.0,"Nota che “saved” non è definito (posizione giusta), ma lo spiega in modo assurdo (un lupo che salva un Villager). Nessuna correzione utile."
+A135,Qwen,Social/party,werewolf,3,2,ambiguous,0,,,
+A135,Qwen,Social/party,werewolf,3,3,inconsistent,0,,,
+A136,Qwen-7B,Abstract deterministic,checkers,1,1,missing,1,1.0,2.0,"Trovato in Missing #4 (“promotion not clearly defined”, limitato alla dama internazionale) e in Inconsistent #2 (“crowning/kinging”). Correzione esatta: “when a piece reaches the last row it becomes a king”."
+A136,Qwen-7B,Abstract deterministic,checkers,1,2,ambiguous,0,,,
+A136,Qwen-7B,Abstract deterministic,checkers,1,3,inconsistent,0,,,
+A137,Qwen-7B,Abstract deterministic,checkers,2,1,missing,1,1.0,2.0,"Trovato in Missing #5 (“crowning rule incomplete”) e Ambiguous #3. Correzione esatta: “When a piece reaches the far end of the board, it is crowned”."
+A137,Qwen-7B,Abstract deterministic,checkers,2,2,ambiguous,0,,,
+A137,Qwen-7B,Abstract deterministic,checkers,2,3,inconsistent,1,1.0,0.0,"Cita entrambe le frasi e dice che si contraddicono, ma corregge tenendo la frase iniettata."
+A138,Qwen-7B,Abstract deterministic,checkers,3,1,missing,1,0.0,2.0,"Trovato in Ambiguous #3 (“crowning process not detailed”). Correzione corretta: “When a man reaches the far side of the board, it is crowned”."
+A138,Qwen-7B,Abstract deterministic,checkers,3,2,ambiguous,0,,,
+A138,Qwen-7B,Abstract deterministic,checkers,3,3,inconsistent,1,1.0,2.0,Cita entrambe le frasi e corregge dalla parte giusta: “The player with the darker color moves first”.
+A139,Qwen-7B,Abstract deterministic,connect-four,1,1,missing,0,,,
+A139,Qwen-7B,Abstract deterministic,connect-four,1,2,ambiguous,1,0.0,2.0,"Punto #4: “doesn’t mention what happens if the board is full”. Lo tratta come regola mancante, non come frase vaga. Correzione esatta: “the game results in a draw”."
+A139,Qwen-7B,Abstract deterministic,connect-four,1,3,inconsistent,1,1.0,2.0,"Punti #1 e #2: indica il conflitto tra uno e due dischi e corregge dalla parte giusta, “one disc per turn”."
+A140,Qwen-7B,Abstract deterministic,connect-four,2,1,missing,1,1.0,0.0,Missing #2: “no mention of where exactly within the chosen column the disc should be placed”. Area giusta ma correzione inutile (“drop from the top”); la gravità non viene aggiunta. Caso limite.
+A140,Qwen-7B,Abstract deterministic,connect-four,2,2,ambiguous,1,0.0,2.0,Missing #3: “lacks a clear end-game scenario”. Lo tratta come regola mancante. Correzione esatta: “the game results in a draw”.
+A140,Qwen-7B,Abstract deterministic,connect-four,2,3,inconsistent,1,1.0,2.0,Missing #5 e Inconsistent #1: indica il conflitto tra uno e due dischi e corregge dalla parte giusta.
+A141,Qwen-7B,Abstract deterministic,connect-four,3,1,missing,1,1.0,0.0,Punto #4: “does not explicitly mention the order within a column”. Correzione imprecisa: “subsequent discs will fill the remaining spaces below it”.
+A141,Qwen-7B,Abstract deterministic,connect-four,3,2,ambiguous,1,1.0,2.0,Punto #5: “the game ends if the board is full without specifying what happens next”. Correzione esatta: draw.
+A141,Qwen-7B,Abstract deterministic,connect-four,3,3,inconsistent,1,1.0,2.0,Punto #1: indica il conflitto tra uno e due dischi e corregge dalla parte giusta.
+A142,Qwen-7B,Abstract deterministic,nine-mens-morris,1,1,missing,0,,,
+A142,Qwen-7B,Abstract deterministic,nine-mens-morris,1,2,ambiguous,1,0.0,2.0,"Missing #1: “The exact number of pieces each player starts with is not specified”. Etichetta Missing, ma la descrizione riconosce il numero vago. Correzione esatta: nove pezzi."
+A142,Qwen-7B,Abstract deterministic,nine-mens-morris,1,3,inconsistent,0,,,
+A143,Qwen-7B,Abstract deterministic,nine-mens-morris,2,1,missing,0,,,
+A143,Qwen-7B,Abstract deterministic,nine-mens-morris,2,2,ambiguous,1,0.0,2.0,Missing #1: “how many pieces is not specified”. Etichetta Missing. Correzione esatta: nove pezzi.
+A143,Qwen-7B,Abstract deterministic,nine-mens-morris,2,3,inconsistent,0,,,
+A144,Qwen-7B,Abstract deterministic,nine-mens-morris,3,1,missing,0,,,
+A144,Qwen-7B,Abstract deterministic,nine-mens-morris,3,2,ambiguous,0,,,
+A144,Qwen-7B,Abstract deterministic,nine-mens-morris,3,3,inconsistent,0,,,
+A145,Qwen-7B,Low-interaction procedural,azul,1,1,missing,0,,,
+A145,Qwen-7B,Low-interaction procedural,azul,1,2,ambiguous,0,,,
+A145,Qwen-7B,Low-interaction procedural,azul,1,3,inconsistent,0,,,
+A146,Qwen-7B,Low-interaction procedural,azul,2,1,missing,0,,,
+A146,Qwen-7B,Low-interaction procedural,azul,2,2,ambiguous,0,,,
+A146,Qwen-7B,Low-interaction procedural,azul,2,3,inconsistent,0,,,
+A147,Qwen-7B,Low-interaction procedural,azul,3,1,missing,0,,,
+A147,Qwen-7B,Low-interaction procedural,azul,3,2,ambiguous,0,,,
+A147,Qwen-7B,Low-interaction procedural,azul,3,3,inconsistent,0,,,
+A148,Qwen-7B,Low-interaction procedural,kingdomino,1,1,missing,0,,,
+A148,Qwen-7B,Low-interaction procedural,kingdomino,1,2,ambiguous,1,0.0,0.0,“The rule about scoring points does not detail how properties are counted”. Indica il passaggio giusto ma con la soluzione sbagliata (proprietà dello stesso tipo); la correzione non dà caselle x corone.
+A148,Qwen-7B,Low-interaction procedural,kingdomino,1,3,inconsistent,0,,,
+A149,Qwen-7B,Low-interaction procedural,kingdomino,2,1,missing,0,,,
+A149,Qwen-7B,Low-interaction procedural,kingdomino,2,2,ambiguous,1,1.0,0.0,"Explicitly define how crowns and properties contribute to points to avoid ambiguity”. Passaggio giusto, ma senza la formula caselle x corone."
+A149,Qwen-7B,Low-interaction procedural,kingdomino,2,3,inconsistent,1,1.0,1.0,"Indica la contraddizione con il 5x5 e propone di togliere “There is no limit”, ma la frase resta nella sua riscrittura del regolamento."
+A150,Qwen-7B,Low-interaction procedural,kingdomino,3,1,missing,0,,,
+A150,Qwen-7B,Low-interaction procedural,kingdomino,3,2,ambiguous,1,0.0,0.0,Missing #5: “lacks specifics on crown types and point values”. Passaggio giusto ma etichetta Missing; correzione sbagliata (“size plus crowns”). Caso limite.
+A150,Qwen-7B,Low-interaction procedural,kingdomino,3,3,inconsistent,0,,,
+A151,Qwen-7B,Low-interaction procedural,ticket-to-ride,1,1,missing,1,0.0,0.0,"Inconsistent #1: “doesn’t specify what happens if the first card drawn is a locomotive”. Indica la mancanza, ma con l’etichetta e la correzione sbagliate (“must return it”)."
+A151,Qwen-7B,Low-interaction procedural,ticket-to-ride,1,2,ambiguous,0,,,
+A151,Qwen-7B,Low-interaction procedural,ticket-to-ride,1,3,inconsistent,1,0.0,0.0,Ambiguous #3: “how often players can claim routes is somewhat ambiguous”. Non vede la contraddizione e corregge a favore della frase iniettata (“multiple routes in a turn”).
+A152,Qwen-7B,Low-interaction procedural,ticket-to-ride,2,1,missing,0,,,
+A152,Qwen-7B,Low-interaction procedural,ticket-to-ride,2,2,ambiguous,0,,,
+A152,Qwen-7B,Low-interaction procedural,ticket-to-ride,2,3,inconsistent,0,,,
+A153,Qwen-7B,Low-interaction procedural,ticket-to-ride,3,1,missing,0,,,
+A153,Qwen-7B,Low-interaction procedural,ticket-to-ride,3,2,ambiguous,0,,,
+A153,Qwen-7B,Low-interaction procedural,ticket-to-ride,3,3,inconsistent,0,,,
+A154,Qwen-7B,Exception-heavy rule systems,exploding-kittens,1,1,missing,0,,,
+A154,Qwen-7B,Exception-heavy rule systems,exploding-kittens,1,2,ambiguous,1,0.0,0.0,"Missing #2: “interaction between See the Future and other actions isn’t explicitly defined”. Diagnosi sbagliata; la correzione dice “top X cards (e.g., 3)”."
+A154,Qwen-7B,Exception-heavy rule systems,exploding-kittens,1,3,inconsistent,0,,,
+A155,Qwen-7B,Exception-heavy rule systems,exploding-kittens,2,1,missing,0,,,
+A155,Qwen-7B,Exception-heavy rule systems,exploding-kittens,2,2,ambiguous,0,,,
+A155,Qwen-7B,Exception-heavy rule systems,exploding-kittens,2,3,inconsistent,0,,,
+A156,Qwen-7B,Exception-heavy rule systems,exploding-kittens,3,1,missing,0,,,
+A156,Qwen-7B,Exception-heavy rule systems,exploding-kittens,3,2,ambiguous,1,1.0,0.0,Ambiguous #1: “interaction between See the Future and other cards is somewhat unclear”. Indica la carta giusta ma la correzione non dà il numero e inventa “keep or discard”.
+A156,Qwen-7B,Exception-heavy rule systems,exploding-kittens,3,3,inconsistent,0,,,
+A157,Qwen-7B,Exception-heavy rule systems,mao,1,1,missing,0,,,
+A157,Qwen-7B,Exception-heavy rule systems,mao,1,2,ambiguous,1,0.0,2.0,Missing #3: “No clear guidance on how many penalty cards a player should receive”. Correzione esatta: una carta di penalità a chi infrange la regola.
+A157,Qwen-7B,Exception-heavy rule systems,mao,1,3,inconsistent,0,,,
+A158,Qwen-7B,Exception-heavy rule systems,mao,2,1,missing,1,1.0,1.0,"Missing #2: “No clear description of actions beyond playing a single card”. Correzione parziale: pesca una carta, ma senza bussare e con l’opzione passa inventata."
+A158,Qwen-7B,Exception-heavy rule systems,mao,2,2,ambiguous,1,1.0,1.0,Ambiguous #2: “The rule for administering penalties could be clearer”. Il problema indicato è il procedimento; la correzione riporta “penalized with a card” ma lascia “may”.
+A158,Qwen-7B,Exception-heavy rule systems,mao,2,3,inconsistent,0,,,
+A159,Qwen-7B,Exception-heavy rule systems,mao,3,1,missing,0,,,
+A159,Qwen-7B,Exception-heavy rule systems,mao,3,2,ambiguous,0,,,
+A159,Qwen-7B,Exception-heavy rule systems,mao,3,3,inconsistent,1,0.0,2.0,"Ambiguous #1: “could mean two things – whether the dealer plays first among players or starts the discard pile”. La segnala come ambigua; la correzione toglie il conflitto: “The dealer places the initial face-up card, then play begins with the player to the left of the dealer”."
+A160,Qwen-7B,Exception-heavy rule systems,uno,1,1,missing,1,0.0,0.0,"Ambiguous #3: “mentions penalties but does not explicitly state them”. Correzione sbagliata: una carta invece di due, senza se viene scoperto; la penalità non c’è nella riscrittura."
+A160,Qwen-7B,Exception-heavy rule systems,uno,1,2,ambiguous,1,0.0,2.0,Missing #1: “The exact number of cards dealt  is not specified”. Correzione esatta.
+A160,Qwen-7B,Exception-heavy rule systems,uno,1,3,inconsistent,0,,,
+A161,Qwen-7B,Exception-heavy rule systems,uno,2,1,missing,1,1.0,0.0,Missing #4: “No clear guidance on what happens once a player has only one card and declares Uno”. Correzione sbagliata: penalità di 10 punti invece di due carte.
+A161,Qwen-7B,Exception-heavy rule systems,uno,2,2,ambiguous,1,0.0,2.0,Missing #1: “The exact number of cards dealt isn’t specified”. Correzione esatta: 7 carte.
+A161,Qwen-7B,Exception-heavy rule systems,uno,2,3,inconsistent,0,,,
+A162,Qwen-7B,Exception-heavy rule systems,uno,3,1,missing,0,,,
+A162,Qwen-7B,Exception-heavy rule systems,uno,3,2,ambiguous,1,0.0,2.0,Missing #1: “The exact number of cards dealt is not specified”. Correzione esatta: 7 carte.
+A162,Qwen-7B,Exception-heavy rule systems,uno,3,3,inconsistent,0,,,
+A163,Qwen-7B,Thematic with randomness,clue,1,1,missing,0,,,
+A163,Qwen-7B,Thematic with randomness,clue,1,2,ambiguous,0,,,
+A163,Qwen-7B,Thematic with randomness,clue,1,3,inconsistent,1,1.0,1.0,"Inconsistent #1: cita “Miss Scarlet always plays first” e “Colonel Mustard always plays first”, corregge tenendo Scarlet ma aggiunge un ordine alfabetico invece che verso sinistra."
+A164,Qwen-7B,Thematic with randomness,clue,2,1,missing,0,,,
+A164,Qwen-7B,Thematic with randomness,clue,2,2,ambiguous,0,,,
+A164,Qwen-7B,Thematic with randomness,clue,2,3,inconsistent,1,1.0,1.0,"Inconsistent #1: “Miss Scarlet starts the game, but also Colonel Mustard always plays first. These statements conflict”. Tiene Scarlet, ma inventa un ordine successivo per colore delle pedine."
+A165,Qwen-7B,Thematic with randomness,clue,3,1,missing,0,,,
+A165,Qwen-7B,Thematic with randomness,clue,3,2,ambiguous,0,,,
+A165,Qwen-7B,Thematic with randomness,clue,3,3,inconsistent,0,,,
+A166,Qwen-7B,Thematic with randomness,forbidden-island,1,1,missing,1,1.0,0.0,"Missing #3: “lacks specific details on how to remove tiles completely from the game”. Il problema è giusto, ma la correzione parla solo delle pedine e non dice che una tessera già allagata affonda."
+A166,Qwen-7B,Thematic with randomness,forbidden-island,1,2,ambiguous,0,,,
+A166,Qwen-7B,Thematic with randomness,forbidden-island,1,3,inconsistent,0,,,
+A167,Qwen-7B,Thematic with randomness,forbidden-island,2,1,missing,0,,,
+A167,Qwen-7B,Thematic with randomness,forbidden-island,2,2,ambiguous,0,,,
+A167,Qwen-7B,Thematic with randomness,forbidden-island,2,3,inconsistent,0,,,
+A168,Qwen-7B,Thematic with randomness,forbidden-island,3,1,missing,0,,,
+A168,Qwen-7B,Thematic with randomness,forbidden-island,3,2,ambiguous,1,0.0,0.0,Inconsistent #2: “does not specify the exact number of cards that constitute being too many”. Correzione sbagliata: “five cards or more” come eccesso (limite a 4 invece di 5).
+A168,Qwen-7B,Thematic with randomness,forbidden-island,3,3,inconsistent,1,0.0,0.0,"Ambiguous #2: nota che “you can capture a treasure on a flooded tile” contrasta con “you must be on a non-flooded tile”, ma corregge tenendo la frase iniettata."
+A169,Qwen-7B,Thematic with randomness,monopoly,1,1,missing,0,,,
+A169,Qwen-7B,Thematic with randomness,monopoly,1,2,ambiguous,0,,,
+A169,Qwen-7B,Thematic with randomness,monopoly,1,3,inconsistent,0,,,
+A170,Qwen-7B,Thematic with randomness,monopoly,2,1,missing,0,,,
+A170,Qwen-7B,Thematic with randomness,monopoly,2,2,ambiguous,0,,,
+A170,Qwen-7B,Thematic with randomness,monopoly,2,3,inconsistent,0,,,
+A171,Qwen-7B,Thematic with randomness,monopoly,3,1,missing,0,,,
+A171,Qwen-7B,Thematic with randomness,monopoly,3,2,ambiguous,0,,,
+A171,Qwen-7B,Thematic with randomness,monopoly,3,3,inconsistent,0,,,
+A172,Qwen-7B,Social/party,dixit,1,1,missing,0,,,
+A172,Qwen-7B,Social/party,dixit,1,2,ambiguous,0,,,
+A172,Qwen-7B,Social/party,dixit,1,3,inconsistent,0,,,
+A173,Qwen-7B,Social/party,dixit,2,1,missing,0,,,
+A173,Qwen-7B,Social/party,dixit,2,2,ambiguous,1,0.0,0.0,"Missing #2 e Inconsistent #2: indicano il caso in cui alcuni indovinano, ma come regola mancante o incoerente; le correzioni inventano punteggi (“half the points”, “points equal to the number of correct votes”)."
+A173,Qwen-7B,Social/party,dixit,2,3,inconsistent,0,,,
+A174,Qwen-7B,Social/party,dixit,3,1,missing,0,,,
+A174,Qwen-7B,Social/party,dixit,3,2,ambiguous,1,0.0,0.0,"Missing #4: “scoring when only some players guess correctly is somewhat vague”. Etichetta Missing; la correzione ricopia “some points” e inventa “points equal to the number of players who correctly identified the image, minus one”."
+A174,Qwen-7B,Social/party,dixit,3,3,inconsistent,0,,,
+A175,Qwen-7B,Social/party,the_resistance,1,1,missing,0,,,
+A175,Qwen-7B,Social/party,the_resistance,1,2,ambiguous,1,1.0,0.0,"Ambiguous #3: “conditions for mission success/failure are somewhat unclear, especially regarding larger groups”. Correzione sbagliata: “an extra Mission Fail card for each additional player” oltre l’ottavo."
+A175,Qwen-7B,Social/party,the_resistance,1,3,inconsistent,0,,,
+A176,Qwen-7B,Social/party,the_resistance,2,1,missing,1,1.0,0.0,"Missing #3: “In case of a tied vote, the rulebook does not clarify what happens next”. Correzione sbagliata: decide il Leader (rivotare o procedere) invece del rifiuto."
+A176,Qwen-7B,Social/party,the_resistance,2,2,ambiguous,1,0.0,0.0,"Missing #2 dice “some missions might require more Mission Fail cards but it doesn’t specify which ones”. Il problema è giusto, ma l’etichetta è Missing, quindi Type 0. La correzione (“more than 8 players, missions requiring 5 or more players need 2”) non è la regola originale. Fix 0."
+A176,Qwen-7B,Social/party,the_resistance,2,3,inconsistent,0,,,
+A177,Qwen-7B,Social/party,the_resistance,3,1,missing,1,1.0,0.0,Missing #2: “There is no mention of how to handle tied votes”. Correzione sbagliata: il Leader ripropone la squadra fino ad avere una maggioranza.
+A177,Qwen-7B,Social/party,the_resistance,3,2,ambiguous,0,,,
+A177,Qwen-7B,Social/party,the_resistance,3,3,inconsistent,0,,,
+A178,Qwen-7B,Social/party,werewolf,1,1,missing,1,0.0,2.0,Ambiguous #2: “does not clarify the sequence of events if the Doctor heals someone who was already targeted”. Etichetta Ambiguous; correzione giusta: “that player remains safe from that specific attack”.
+A178,Qwen-7B,Social/party,werewolf,1,2,ambiguous,0,,,
+A178,Qwen-7B,Social/party,werewolf,1,3,inconsistent,0,,,
+A179,Qwen-7B,Social/party,werewolf,2,1,missing,1,1.0,0.0,Missing #2: “don’t explicitly describe the Doctor’s healing process beyond choosing a victim”. Correzione sbagliata: il Dottore deve verificare che il bersaglio sia un villico; manca la sopravvivenza del curato.
+A179,Qwen-7B,Social/party,werewolf,2,2,ambiguous,0,,,
+A179,Qwen-7B,Social/party,werewolf,2,3,inconsistent,0,,,
+A180,Qwen-7B,Social/party,werewolf,3,1,missing,1,1.0,1.0,"Missing #3: “descriptions of some roles are vague or incomplete”, con “Doctor: Can save a single player from being killed”. Ambiguous #2 la contraddice: il Moderatore verifica che il curato sia un lupo."
+A180,Qwen-7B,Social/party,werewolf,3,2,ambiguous,0,,,
+A180,Qwen-7B,Social/party,werewolf,3,3,inconsistent,1,0.0,0.0,Missing #4: “The winning condition for the Werewolves is unclear”. Non vede il conflitto; correzione senza senso (“after all the Werewolves have been eliminated”).

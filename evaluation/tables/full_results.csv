@@ -1,0 +1,30 @@
+task,criterion,Qwen 0.5B,Llama 1B,Mistral 7B,Qwen 7B
+Explain,Task understanding (1-5),4.53,4.69,4.91,4.84
+Explain,Coverage (1-5),1.44,2.38,3.60,3.87
+Explain,Consistency (1-5),1.20,2.49,4.71,3.80
+Explain,Hallucination (1-5),1.04,1.82,4.07,3.36
+Flaw Detection,Task understanding (1-5),2.07,3.11,4.96,5.00
+Flaw Detection,Recall,7%,18%,21%,35%
+Flaw Detection,Recall: missing,4%,16%,9%,33%
+Flaw Detection,Recall: ambiguous,13%,20%,36%,44%
+Flaw Detection,Recall: inconsistent,4%,18%,20%,27%
+Flaw Detection,Type correct (of detected),30%,67%,48%,51%
+Flaw Detection,Exact fix (of detected),0%,0%,38%,38%
+Flaw Detection,Partial or exact fix (of detected),30%,33%,83%,51%
+Flaw Detection,Invented problems per answer,4.11,8.09,5.91,7.42
+Simulation,Task understanding (1-5),2.71,3.67,4.89,4.87
+Simulation,Move correctness: 2 / 1 / 0 (%),2 / 4 / 93,2 / 27 / 71,22 / 24 / 53,7 / 40 / 53
+Simulation,Consistency (1-5),1.07,1.56,2.58,2.40
+Simulation,Hallucination (1-5),1.47,2.58,3.47,3.36
+Generation of a New Game,Task understanding (1-5),4.53,4.60,5.00,4.47
+Generation of a New Game,Constraint adherence (1-5),2.20,3.47,3.93,4.00
+Generation of a New Game,Completeness (1-5),1.67,2.93,3.33,4.00
+Generation of a New Game,Playability (1-5),1.73,2.53,3.00,3.27
+Generation of a New Game,Balance: 2 / 1 / 0 (%),0 / 80 / 20,7 / 67 / 27,13 / 67 / 20,47 / 40 / 13
+Generation of a New Game,Fun: 2 / 1 / 0 (%),0 / 0 / 100,7 / 73 / 20,60 / 40 / 0,60 / 33 / 7
+Variant,Task understanding (1-5),3.40,4.93,5.00,5.00
+Variant,Meaningful variant: 2 / 1 / 0 (%),7 / 33 / 60,73 / 0 / 27,100 / 0 / 0,100 / 0 / 0
+Variant,Consistency (1-5),1.60,2.53,3.27,2.73
+Variant,Hallucination (1-5),3.93,3.93,4.67,4.73
+Variant,Balance: 2 / 1 / 0 (%),7 / 87 / 7,0 / 87 / 13,40 / 47 / 13,13 / 60 / 27
+Variant,Fun: 2 / 1 / 0 (%),7 / 13 / 80,0 / 80 / 20,80 / 20 / 0,53 / 47 / 0

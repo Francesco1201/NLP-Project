@@ -1,0 +1,30 @@
+task,criterion,Abstract,Procedural,Exception-heavy,Thematic,Social/party
+Explain,Task understanding (1-5),4.67,5.00,5.00,4.89,4.67
+Explain,Coverage (1-5),4.67,3.78,3.78,3.11,4.00
+Explain,Consistency (1-5),4.33,4.11,3.78,3.22,3.56
+Explain,Hallucination (1-5),3.67,3.22,3.44,3.11,3.33
+Flaw Detection,Task understanding (1-5),5.00,5.00,5.00,5.00,5.00
+Flaw Detection,Recall,56%,22%,41%,19%,37%
+Flaw Detection,Recall: missing,56%,11%,33%,11%,56%
+Flaw Detection,Recall: ambiguous,56%,33%,78%,11%,44%
+Flaw Detection,Recall: inconsistent,56%,22%,11%,33%,11%
+Flaw Detection,Type correct (of detected),67%,33%,36%,60%,50%
+Flaw Detection,Exact fix (of detected),80%,0%,45%,0%,10%
+Flaw Detection,Partial or exact fix (of detected),80%,17%,64%,40%,20%
+Flaw Detection,Invented problems per answer,4.78,9.00,7.11,8.67,7.56
+Simulation,Task understanding (1-5),4.78,4.89,5.00,4.67,5.00
+Simulation,Move correctness: 2 / 1 / 0 (%),11 / 11 / 78,0 / 33 / 67,11 / 67 / 22,0 / 44 / 56,11 / 44 / 44
+Simulation,Consistency (1-5),2.00,2.33,2.67,2.56,2.44
+Simulation,Hallucination (1-5),2.78,2.89,4.00,3.11,4.00
+Generation of a New Game,Task understanding (1-5),4.33,4.33,4.00,4.67,5.00
+Generation of a New Game,Constraint adherence (1-5),4.00,3.33,5.00,3.00,4.67
+Generation of a New Game,Completeness (1-5),4.33,4.33,4.00,4.00,3.33
+Generation of a New Game,Playability (1-5),3.00,3.67,3.00,4.00,2.67
+Generation of a New Game,Balance: 2 / 1 / 0 (%),0 / 100 / 0,67 / 33 / 0,67 / 0 / 33,67 / 0 / 33,33 / 67 / 0
+Generation of a New Game,Fun: 2 / 1 / 0 (%),67 / 33 / 0,33 / 67 / 0,67 / 33 / 0,67 / 0 / 33,67 / 33 / 0
+Variant,Task understanding (1-5),5.00,5.00,5.00,5.00,5.00
+Variant,Meaningful variant: 2 / 1 / 0 (%),100 / 0 / 0,100 / 0 / 0,100 / 0 / 0,100 / 0 / 0,100 / 0 / 0
+Variant,Consistency (1-5),2.67,3.00,3.00,2.33,2.67
+Variant,Hallucination (1-5),5.00,4.67,4.67,5.00,4.33
+Variant,Balance: 2 / 1 / 0 (%),0 / 67 / 33,0 / 67 / 33,0 / 100 / 0,33 / 33 / 33,33 / 33 / 33
+Variant,Fun: 2 / 1 / 0 (%),33 / 67 / 0,100 / 0 / 0,33 / 67 / 0,33 / 67 / 0,67 / 33 / 0

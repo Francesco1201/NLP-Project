@@ -1,0 +1,315 @@
+model,category,game,iteration,taskUnderstanding,coverage,consistency,hallucination,notes
+Llama-1B,Abstract deterministic,checkers,1,5,3,1,1,"Vittoria contraddittoria: bloccare l’avversario, avere più pezzi, e “se sei bloccato vinci”. 
+Muffin trasformato in una cattura libera per penalità. Mosse “ferme” inventate. 12 pedine da memoria. Mancano chi muove per primo, la casella libera per il movimento e la promozione a re; catture multiple solo accennate."
+Llama-1B,Abstract deterministic,checkers,2,5,3,2,2,"Vittoria contraddittoria: catturare tutto o bloccare, poi solo bloccare. Catture multiple confuse parzialmente con il Muffin.
+ Il re cattura atterrando su una casella occupata. 12 pedine e disposizione iniziale inventate. Mancano chi muove per primo, la casella libera dopo il salto, il movimento di una sola casella e la promozione a re."
+Llama-1B,Abstract deterministic,checkers,3,5,3,2,1,"Inizia il chiaro invece dello scuro. Si inventa che il blocco cattura il pezzo.
+ Vittoria a chi ha più pedine, in contraddizione con l’obiettivo. Catture multiple attribuite solo ai re. Manca la cattura obbligatoria. Movimento, cattura e re descritti correttamente. 12 pedine da memoria."
+Llama-1B,Abstract deterministic,connect-four,1,4,4,4,3,"Completa, manca solo chi inizia.
+Inventa colori rosso e giallo, rosso che inizia ed “empty column"". Consiglio di strategia sul blocco. Domanda finale all’utente."
+Llama-1B,Abstract deterministic,connect-four,2,4,3,1,2,"Pareggio sbagliato (la partita continua e poi finisce in pareggio).
+Frase contraddittoria sulla vittoria (“in a vertical column, horizontally…”). Molta strategia in Core mechanics. 7 dischi a testa inventati. Colori rosso e giallo, “empty column” inventati. Manca chi inizia."
+Llama-1B,Abstract deterministic,connect-four,3,4,3,2,2,"Setup inventato (49 “free spaces” disposti a caso) e incoerente con la griglia 7x6.
+Disegna la griglia, ma il disegno è sbagliato (numerata fino a 48 più una “Free Space”). Esempio che piazza il disco in riga 5 invece di farlo cadere. Core mechanics sostituite da consigli di strategia. Mancano chi inizia, la caduta del disco e il pareggio. inventa colori rosso e giallo e “click Drop”."
+Llama-1B,Abstract deterministic,nine-mens-morris,1,4,2,2,1,"Vittoria portando l'avversario a zero pezzi invece che a due. Setup inventato (piazzamento casuale, “four squares”, griglia 9x9).
+Protezione dei pezzi nel mulino rovesciata. Strategie presentate come modi per vincere. Fasi e volo descritti correttamente. Mancano l’alternanza nel piazzamento, il movimento adiacente e la possibilità di riformare il mulino."
+Llama-1B,Abstract deterministic,nine-mens-morris,2,4,3,5,1,"Mulini anche in diagonale (inventato). Piazzamento e movimento fusi nello stesso turno.
+Soglia di vittoria sbagliata (zero o meno di due pezzi invece di due), manca la vittoria per blocco. Manca la protezione dei pezzi nel mulino. Volo e piazzamento corretti. Sezione di strategia esplicita nella fine partita."
+Llama-1B,Abstract deterministic,nine-mens-morris,3,4,3,1,1,"Setup casuale in contraddizione con il piazzamento a turni. Fase 2 che comincia “once a mill is formed”.
+Vittoria contraddittoria (zero pezzi, meno di quattro, trappola incomprensibile). Pounding descritto in modo confuso. Manca la protezione dei pezzi nel mulino. Volo corretto. Brevi parti di strategia."
+Llama-1B,Low-interaction procedural,azul,1,5,1,5,1,"Conosce le tre fasi del round, ma quasi nessuna regola concreta. Espositori assegnati ai giocatori.
+Centro del tavolo frainteso. Fine partita anche con linee verticali. Spareggio inventato (round finale). Mancano le linee di preparazione, il punteggio delle tessere e la linea del pavimento."
+Llama-1B,Low-interaction procedural,azul,2,5,1,2,1,"Conosce i nomi di fasi e componenti, ma ne inventa il funzionamento. Espositori personali e pesca dal sacchetto.
+Tutte le fasi in un solo turno. Punteggio sulle linee di preparazione. Fine partita e bonus finali corretti ma senza valori. Mancano la scelta per colore, il centro del tavolo e la linea del pavimento."
+Llama-1B,Low-interaction procedural,azul,3,4,1,1,1,"Setup inventato (100 tessere in due colori e cinque espositori per giocatore). Pesca dal sacchetto.
+Tessere divise tra più linee. Fine partita contraddittoria (linea completata / 50 punti). Corretti: 10 punti per colore completo e vittoria a chi ha più punti. Parità condivisa senza lo spareggio sulle righe orizzontali."
+Llama-1B,Low-interaction procedural,kingdomino,1,4,2,2,1,"Fine partita inventata (sei punti).
+Re usati per collegare i domino invece che per sceglierli. Due re per tutti. Manca il punteggio (caselle per corone). Regola di collegamento quasi corretta. Sezione finale di strategia."
+Llama-1B,Low-interaction procedural,kingdomino,2,5,3,2,1,"Collegamento dei domino e punteggio (caselle per corone) corretti.
+Turno inventato (pesca con abbinamento alla fila, D2 che scarta un domino). Numero di turni invertito tra 2 e 3 giocatori. Un re a testa per tutti. Domino personali inventati. Spareggio confuso."
+Llama-1B,Low-interaction procedural,kingdomino,3,5,3,2,1,"Ordine dei turni inventato (azioni simultanee, inizia chi ha più re).
+Fine partita inventata. Re e domino per numero di giocatori in parte sbagliati e contraddittori. Manca la regola di collegamento. Punteggio accennato senza moltiplicazione. Corretti 24 domino con 2 giocatori e 48 con 4, 12 turni, le due azioni del turno."
+Llama-1B,Low-interaction procedural,ticket-to-ride,1,5,2,2,1,"Turno inventato (pesca e reclamo nello stesso turno, pesca da 2 a 5 carte).
+Obiettivo e condizioni di vittoria contraddittori (""fewest routes"", più punti solo come spareggio). Setup quasi corretto ma “keep at least one” invece di due. Mancano carte scoperte, locomotive, tratte grigie, sottrazione per i biglietti incompleti e turno finale."
+Llama-1B,Low-interaction procedural,ticket-to-ride,2,5,2,2,1,"Turno inventato (pesca, reclamo e risoluzione nello stesso turno).
+Biglietti destinazione fraintesi (“collect three to earn points”). Locomotive che reclamano più tratte. Percorso più lungo come spareggio. Fine partita incompleta (zero o due treni, senza turno finale). Setup senza le 4 carte iniziali e le 5 scoperte."
+Llama-1B,Low-interaction procedural,ticket-to-ride,3,5,3,4,4,"Turno corretto (una sola azione tra le tre).
+Setup quasi completo. Mancano le regole di pesca (2 carte, locomotiva scoperta), tratte grigie, locomotive come jolly, tabella dei punti, sottrazione per i biglietti incompleti, turno finale e valore del bonus (10). Spareggi in ordine invertito."
+Llama-1B,Exception-heavy rule systems,exploding-kittens,1,4,2,5,2,"Turno invertito (pesca all’inizio, una sola carta giocata).
+Il Defuse ruba carte (inventato). Mancano il reinserimento degli Exploding kitten, l’effetto del Defuse, Nope, See the Future e le coppie di carte. Eliminazione e vittoria corrette. Conclusione di strategia."
+Llama-1B,Exception-heavy rule systems,exploding-kittens,2,4,3,1,1,"Obiettivo inventato (pescare tutti gli Exploding kitten).
+Defuse riutilizzabile. Doppia pesca nel turno. Carte in mano scoperte sul tavolo. Mancano il reinserimento dell'Exploding kitten, le carte azione e il Nope. Turno, coppie, eliminazione e vittoria quasi corretti."
+Llama-1B,Exception-heavy rule systems,exploding-kittens,3,4,3,2,1,"Turno inventato (pesca all’inizio, carta pescata usata subito, si esplode passando).
+Manca il reinserimento dell’Exploding Kitten con il Defuse. Manca il Nope. Setup, carte azione, coppie e vittoria quasi corretti. Chiusura di strategia."
+Llama-1B,Exception-heavy rule systems,mao,1,5,3,3,3,"Basi e sette spiegati bene. Mancano penalità, bad call e Point of Order.
+Special rules imprecise: “talking” senza dire che è vietato, skip senza Asso, Jack senza scelta del seme. Inventata una vittoria a eliminazione che contraddice la vittoria con Mao. Mazzo da 52 carte non richiesto dal regolamento."
+Llama-1B,Exception-heavy rule systems,mao,2,5,3,5,4,"Risposta corretta ma incompleta: mancano 8, Asso, catena dei sette con penalità, penalità/bad call e Point of Order.
+Non dice che la nuova regola del vincitore è segreta. Nomi alternativi “Maoh” e ""Mão"" inventati."
+Llama-1B,Exception-heavy rule systems,mao,3,4,2,3,2,"Regole speciali quasi assenti o travisate: Jack e cambio seme presentati come “trucchi” facoltativi, picche “high-value” (inventato), mancano 8, Asso, sette e Point of Order.
+Chi parla viene eliminato (inventato, in realtà carta di penalità). Setup incoerente (7 carte poi tutto il mazzo distribuito). Chiude con “don’t worry about following the rules exactly”."
+Llama-1B,Exception-heavy rule systems,uno,1,5,3,2,2,"Nessuna carta speciale nominata (Draw Two, Reverse, Skip, Wild, Wild Draw Four).
+Punteggio assente ma vittoria a 500 punti citata. Inventa carte azione attivate quando si pescano, nuova carta scoperta a ogni turno, partita che continua senza pescare a mazzo esaurito. Setup confuso (“Draw pile” usato per due cose)."
+Llama-1B,Exception-heavy rule systems,uno,2,5,3,3,4,"Nomina tutte le carte speciali ma spiega solo il Draw Two.
+ Manca “Uno” con la penalità di due carte. Punteggio assente, vittoria contraddittoria tra “primo a finire le carte” e “500 punti”. Carte speciali presentate come sempre giocabili; pescare presentato come facoltativo."
+Llama-1B,Exception-heavy rule systems,uno,3,5,3,3,3,"Punteggio presente ma senza dire che si contano le carte degli avversari; Face value = 0 non esiste.
+Carte speciali nominate con effetti solo generici; aggiunto Shuffle Hand come tipo standard. Manca “Uno”. Inventata la pescata (o presa dagli scarti) a ogni turno."
+Llama-1B,Thematic with randomness,clue,1,5,2,2,1,"Setup e movimento corretti. Ipotesi e smentite stravolte: è chi fa l’ipotesi a mostrare una carta della busta; i giocatori pescano e tengono le carte della busta.
+Mancano Miss Scarlet che inizia e l’unica accusa con verifica segreta. Inventati complici e spareggio se più giocatori indovinano."
+Llama-1B,Thematic with randomness,clue,2,5,1,1,1,"Setup confuso con due buste e carte della soluzione in mano ai giocatori.
+Mancano Miss Scarlet che inizia, movimento (dado, passaggi segreti) e unica accusa. Mr. Boddy (la vittima) messo tra i sospettati. Vittoria rovesciata."
+Llama-1B,Thematic with randomness,clue,3,5,2,3,2,"Ipotesi spiegata bene, con la formula corretta.
+Mancano Miss Scarlet che inizia, distribuzione delle carte rimaste e unica accusa con verifica segreta. Inventa carte mostrate che tornano nella busta, carte con effetti speciali, passaggi segreti per tornare indietro. Accusa e vittoria a volte senza l’arma."
+Llama-1B,Thematic with randomness,forbidden-island,1,5,2,3,2,"Turno e quattro azioni corretti. Mancano 6 tessere inondate all’inizio, avventurieri con poteri, carte iniziali, Waters Rise, effetto delle carte Flood (inondata poi affonda) e limite di 5 carte.
+Sconfitta solo generica. Inventa mazzo Special Action al posto delle carte Adventurer, a mazzo Tesoro finito si mescolano gli scarti Flood. Contraddice la condizione di vittoria."
+Llama-1B,Thematic with randomness,forbidden-island,2,5,1,1,1,"Quattro azioni presenti ma senza vincoli di tessera. Carte Flood sempre 6 invece del livello dell’acqua.
+Inventata la fase “act on the flood level”. Mancano tessere inondate, avventurieri, Waters Rise, effetto delle carte Flood, limite di mano e Helicopter Lift. Vittoria contraddittoria: cooperativo ma vince chi ha più tesori; Fools’ Landing prima dei tesori."
+Llama-1B,Thematic with randomness,forbidden-island,3,5,2,2,2,"Setup, turno e azioni corretti.
+Mancano tessere inondate, avventurieri con poteri, Waters Rise, effetto delle carte Flood, limite di mano e sconfitte. Inventa la fine della partita a mazzo Tesoro esaurito, la vittoria possibile anche se Fools’ Landing affonda, il divieto di muoversi su tessere inondate."
+Llama-1B,Thematic with randomness,monopoly,1,4,1,3,2,"Mancano 1.500 $ iniziali, VIA (200 $), doppi, asta, affitto doppio sul gruppo completo, regole di costruzione, prigione e bancarotta.
+Inventa che le proprietà distribuite sono all’inizio, le tasse e multe incassate dai giocatori, la vittoria per maggiore ricchezza. Case e alberghi solo nei consigli. Sezione finale di strategia."
+Llama-1B,Thematic with randomness,monopoly,2,4,2,3,2,"Mancano 1.500 $ iniziali, VIA, doppi, asta, affitto doppio, come uscire di prigione.
+Case solo con gruppo completo ma senza costruzione uniforme. Inventa soldi dal Parcheggio gratuito, fine quando un giocatore ha tutte le proprietà, vittoria per maggiore ricchezza. Si può comprare una proprietà di un altro giocatore. Sezione finale di strategia."
+Llama-1B,Thematic with randomness,monopoly,3,5,3,2,2,"Setup con i tagli delle banconote del regolamento (manca il totale di 1.500 $).
+Mancano VIA, doppi, asta, affitto doppio, regole di costruzione e prigione. Inventati: tasse sulle proprietà libere, punti bonus, fine al primo giocatore in bancarotta. Tre condizioni di fine incompatibili; affitto descritto al contrario."
+Llama-1B,Social/party,dixit,1,5,2,2,1,"Fasi abbozzate ma confuse. Il narratore tiene segrete le carte e ridistribuisce nuove mani.
+Mancano gettoni voto, regola “tutti o nessuno”, +1 per voto, divieto di votare la propria carta, rotazione del narratore. Inventati: vittoria a 12 punti, carte scartate giocabili. Due condizioni di vittoria incompatibili."
+Llama-1B,Social/party,dixit,2,5,1,1,1,"Unica parte corretta la frase del narratore.
+Manca che gli altri danno una carta, tutte vengono mescolate e scoperte. Inventa 2 carte a testa, punti per le risposte sbagliate, vince chi indovina di più. Carta del narratore rivelata coperta e tenuta segreta im contraddizione. Mancano gettoni voto, rotazione e regola “tutti o nessuno”."
+Llama-1B,Social/party,dixit,3,5,3,3,3,"Setup, voto segreto e fine partita corretti.
+Manca la frase del narratore. Carte prese dal mazzo invece che dalla mano; nessun rimescolamento. Narratore 2 punti invece di 0 nel caso “tutti o nessuno”, manca il +1 per voto ricevuto. Obiettivo in contrasto con la fine (“vince chi indovina di più”)."
+Llama-1B,Social/party,the_resistance,1,5,2,4,4,"Manca il voto sulla squadra e la vittoria delle spie dopo cinque rifiuti.
+Mancano numero di spie, dimensione delle squadre, obbligo di Success per la Resistenza, eccezione della 4ª missione. Inventato un pareggio che non può esistere."
+Llama-1B,Social/party,the_resistance,2,5,2,3,2,"Inventa ruoli scelti dai giocatori, pareggio nel voto che non cambia niente, pareggio finale che fa tornare al round precedente. Mancano spie che si riconoscono, dimensione delle squadre, passaggio del leader, cinque rifiuti, regola della Fail."
+Llama-1B,Social/party,the_resistance,3,5,2,3,2,"Manca il voto sulla squadra con tutto ciò che ne segue. Mancano regola della Fail, obbligo di Success per la Resistenza, numero di spie e dimensione delle squadre.
+Inventa che il leader rivela la propria carta personaggio (vietato dal regolamento), che chi completa male la missione perde e il divieto di comunicare senza essere osservati."
+Llama-1B,Social/party,werewolf,1,5,3,4,3,"Ruoli, giorno con annuncio delle morti, discussione e voto a maggioranza corretti.
+La notte è sbagliata: i lupi non scelgono la vittima, il Veggente fa domande, il Moderatore chiede a ognuno se è un lupo. Mancano secondo giocatore per l’accusa, difesa e ruolo non rivelato. Lupi in più con numero dispari; lupi vincono quando superano invece che quando eguagliano."
+Llama-1B,Social/party,werewolf,2,5,3,2,2,"Annuncio di morti e salvataggi, difesa di 30 secondi e scelta della vittima corretti.
+Poteri di Dottore e Veggente mai spiegati; mancano carte segrete, secondo giocatore per l’accusa, maggioranza e ruolo non rivelato. Inventa fine della partita dopo cinque minuti, caccia notturna volontaria con il Moderatore che rivela i lupi. Lupi vincono quando superano."
+Llama-1B,Social/party,werewolf,3,5,3,1,1,"Quasi tutti i pezzi presenti ma sbagliati. Caccia dei lupi spostata di giorno, lupi che si cacciano a vicenda e scelgono anche chi salvare.
+Partita che finisce alla prima eliminazione o dopo cinque minuti. Parità che fa vincere i Villagers. Obiettivo dei lupi contraddittorio. Mancano carte segrete, secondo giocatore per l’accusa e ruolo non rivelato."
+Mistral-7B,Abstract deterministic,checkers,1,5,4,5,3,"Completa e coerente. Muffin descritto correttamente (l’avversario rimuove il pezzo di chi non cattura).
+ Mancano le caselle scure e le catture multiple. 12 pedine e disposizione su due righe da memoria."
+Mistral-7B,Abstract deterministic,checkers,2,5,4,5,3,"Completa e coerente. Mancano le catture multiple e i poteri del re.
+12 pedine e disposizione iniziale da memoria."
+Mistral-7B,Abstract deterministic,checkers,3,5,5,3,2,"Inventa che il re si muove più volte per turno.
+ Muffin rovesciato (penalità a chi non può catturare). Contraddizione tra cattura facoltativa e obbligatoria. Disposizione iniziale inventata. Non dice esplicitamente che chi resta senza mosse perde."
+Mistral-7B,Abstract deterministic,connect-four,1,5,4,5,4,"Completa e fedele al regolamento, manca solo chi inizia.
+Aggiunge che la griglia è vuota all’inizio (non detto nel testo)."
+Mistral-7B,Abstract deterministic,connect-four,2,4,4,5,4,"Completa e fedele al regolamento, manca solo chi inizia.
+Inventa colori rosso e giallo (come esempio). Consiglio di strategia sul blocco."
+Mistral-7B,Abstract deterministic,connect-four,3,4,4,5,4,"Completa e fedele al regolamento, manca solo chi inizia.
+Colonne e righe etichettate A-G e 1-6 (non nel testo). Breve consiglio sul blocco dell’avversario."
+Mistral-7B,Abstract deterministic,nine-mens-morris,1,5,5,5,5,"Completa, coerente e fedele al regolamento.
+Manca solo la protezione dei pezzi che fanno parte di un mulino."
+Mistral-7B,Abstract deterministic,nine-mens-morris,2,5,4,5,3,"Quasi completa e fedele al regolamento: unica risposta che cita la protezione dei pezzi nel mulino.
+Apertura e chiusura del mulino attribuite al mulino dell’avversario. Manca il divieto di salto nella fase 2."
+Mistral-7B,Abstract deterministic,nine-mens-morris,3,5,4,4,4,"Quasi completa e fedele al regolamento. Tabellone descritto come griglia 4x6 (inventato). Stallo usato al posto di vittoria nell’obiettivo.
+Mancano la protezione dei pezzi nel mulino e il divieto di salto."
+Mistral-7B,Low-interaction procedural,azul,1,5,3,5,5,"Nessuna invenzione, ma spiegazione spesso generica: mancano i numeri degli espositori, i valori dei bonus, il punteggio delle tessere sul muro e le regole delle linee di preparazione.
+Fine partita, spareggio, pavimento e variante corretti."
+Mistral-7B,Low-interaction procedural,azul,2,5,3,4,4,"Molto completa sulle linee di preparazione, sul pavimento, sulla fine partita e sullo spareggio.
+Mancano i numeri degli espositori, i valori dei bonus, il punteggio preciso delle tessere sul muro, il centro del tavolo e il segnalino del primo giocatore. Inventa che le tessere rimaste vengono restituite alla scatola."
+Mistral-7B,Low-interaction procedural,azul,3,5,3,5,5,"Completa e fedele al regolamento, nessuna invenzione.
+Mancano i numeri degli espositori, i valori dei bonus, il centro del tavolo e il segnalino del primo giocatore, e che dalle linee complete si sposta una sola tessera."
+Mistral-7B,Low-interaction procedural,kingdomino,1,5,5,5,5,"Completa e fedele al regolamento.
+Nello spareggio manca il passaggio sul numero di corone."
+Mistral-7B,Low-interaction procedural,kingdomino,2,5,4,5,3,"Quasi completa e fedele al regolamento.
+Fila dei re al posto della fila dei domino. Ultimo turno descritto come turno di calcolo dei punti. Rimanda al regolamento per il numero di domino. Nello spareggio manca il passaggio sulle corone."
+Mistral-7B,Low-interaction procedural,kingdomino,3,5,4,3,5,"Quasi completa e fedele al regolamento.
+Contraddizione sul numero di re (uno a testa / due nel gioco a 2). Mancano il castello, lo scarto per collegamento impossibile e il passaggio sulle corone nello spareggio."
+Mistral-7B,Low-interaction procedural,ticket-to-ride,1,5,4,5,3,"Quasi completa e fedele al regolamento (setup, turno, biglietti, fine partita e spareggi corretti).
+Inventa la possibilità di scambiare la seconda carta pescata con una scoperta. Mancano la regola della locomotiva scoperta, le tratte grigie e il valore del bonus (10)."
+Mistral-7B,Low-interaction procedural,ticket-to-ride,2,5,4,5,5,"Completa e fedele al regolamento, tabella dei punti per intero, tratte doppie e spareggi corretti.
+Mancano solo la regola della locomotiva scoperta e il valore del bonus del percorso più lungo (10)."
+Mistral-7B,Low-interaction procedural,ticket-to-ride,3,5,4,5,5,"Completa e fedele al regolamento, quasi una parafrasi.
+Mancano la regola della locomotiva scoperta, le tratte grigie e i valori della tabella dei punti."
+Mistral-7B,Exception-heavy rule systems,exploding-kittens,1,5,4,5,5,"Completa e fedele al regolamento, tutte le carte con il loro effetto.
+Mancano la scelta della posizione in cui rimettere l’Exploding Kitten con il Defuse e le combinazioni da tre carte e da cinque carte diverse."
+Mistral-7B,Exception-heavy rule systems,exploding-kittens,2,5,3,5,4,"Fedele al regolamento su setup, turno, Defuse e vittoria.
+Carte azione descritte in modo generico, senza nomi; mancano See the Future, Nope e le coppie di carte. Numero di Defuse extra per 3 giocatori inventato."
+Mistral-7B,Exception-heavy rule systems,exploding-kittens,3,4,4,5,5,"Completa e fedele al regolamento, carte azione con i loro effetti. Mancano il Nope, la scelta della posizione dell’Exploding Kitten con il Defuse e le combinazioni da tre carte e da cinque carte diverse.
+Consigli di strategia ripresi dal regolamento nella sezione finale."
+Mistral-7B,Exception-heavy rule systems,mao,1,5,4,3,4,"Molto fedele al regolamento: tutte le regole speciali e i sette completi.
+Mancano penalità e bad call; Point of Order solo nominato. Obiettivo contraddittorio (“be the last player with cards”) rispetto alla sezione 5. Picche: dice di nominare la carta precedente invece di quella appena giocata."
+Mistral-7B,Exception-heavy rule systems,mao,2,5,3,5,4,"Molto fedele al regolamento: setup completo (frase d’inizio, chi parte), tutte le regole speciali.
+Sette senza la pesca di una carta per ogni sette giocato. Mancano penalità/bad call e Point of Order. Picche: nomina la carta precedente invece di quella appena giocata."
+Mistral-7B,Exception-heavy rule systems,mao,3,5,3,5,5,"Fedele al regolamento e corretta in tutto ciò che dice.
+Sette senza la pesca di una carta per ogni sette giocato. Mancano penalità/bad call e Point of Order."
+Mistral-7B,Exception-heavy rule systems,uno,1,4,4,4,4,"Effetti delle carte speciali e valori dei punti rimandati alle “section 6” e “section 9” del regolamento invece di spiegarli.
+Setup senza numero di carte né pila degli scarti. “Uno” detto con l’ultima carta invece che con una carta rimasta. Sezione 3 fa pescare a ogni turno, in contrasto con la sezione 4."
+Mistral-7B,Exception-heavy rule systems,uno,2,5,4,5,4,"Struttura completa e coerente. Carte speciali solo nominate, senza effetti. Punteggio senza valori e senza riferimento alle carte degli avversari.
+Dopo la pescata non dice che si può giocare la carta o che il turno passa. Inventa il motivo per dire “Uno” e nuovo round se più giocatori finiscono insieme."
+Mistral-7B,Exception-heavy rule systems,uno,3,5,4,4,4,"Manca la penalità per chi dimentica “Uno”.
+Valori dei punti rimandati al regolamento. Inventato (e incoerente) il caso di più giocatori che finiscono insieme, risolto con “la carta più bassa in mano”."
+Mistral-7B,Thematic with randomness,clue,1,5,2,5,4,"Corretta e coerente ma generica. Busta senza una carta per tipo, movimento senza vincoli, ipotesi senza obbligo della stanza in cui si è né spostamento di sospettato e arma, smentita senza ordine né segretezza.
+Mancano Miss Scarlet che inizia e l’unica accusa. Dice che tutti gli avversari provano a smentire, invece del primo che può."
+Mistral-7B,Thematic with randomness,clue,2,5,3,5,4,"Setup, ipotesi e accusa sbagliata spiegati bene.
+Mancano Miss Scarlet che inizia, vincoli di movimento, ordine e segretezza della smentita, unica accusa per partita. Busta rivelata invece che guardata in segreto."
+Mistral-7B,Thematic with randomness,clue,3,5,3,5,4,"Setup, movimento e accusa sbagliata corretti.
+Ipotesi senza obbligo della stanza in cui si è né spostamento di sospettato e arma; smentita senza ordine né segretezza, con “cards” al plurale. Mancano Miss Scarlet che inizia e l’unica accusa con verifica segreta."
+Mistral-7B,Thematic with randomness,forbidden-island,1,5,3,5,4,"Setup quasi completo, turno, vittoria e quattro sconfitte corretti.
+Azioni solo nominate, senza i vincoli. Mancano Waters Rise, effetto delle carte Flood durante il gioco (inondata poi affonda) e limite di 5 carte. Mazzo Tesoro diviso tra i giocatori invece di 2 carte a testa."
+Mistral-7B,Thematic with randomness,forbidden-island,2,5,3,5,4,"Setup, turno, azioni con vincoli, vittoria e quattro sconfitte completi e fedeli. Mancano Waters Rise, effetto delle carte Flood durante il gioco e limite di 5 carte.
+Le 6 carte iniziali messe nel mazzo di pesca Flood invece che negli scarti."
+Mistral-7B,Thematic with randomness,forbidden-island,3,5,3,5,4,"Turno, azioni con vincoli, vittoria e quattro sconfitte corretti.
+Setup senza tessere inondate iniziali né poteri degli avventurieri; mazzo Tesoro diviso tra i giocatori invece di 2 carte a testa. Mancano Waters Rise, effetto delle carte Flood e limite di 5 carte."
+Mistral-7B,Thematic with randomness,monopoly,1,5,3,5,4,"Asta, prigione e bancarotta corrette.
+Mancano 1.500 $ iniziali, partenza dal VIA e 200 $ di stipendio, doppio che fa ritirare, affitto doppio sul gruppo completo, nessuna rendita sulle ipotecate e regole di costruzione. Inventa che si può vendere la carta “Get Out of Jail Free” per uscire di prigione."
+Mistral-7B,Thematic with randomness,monopoly,2,5,2,4,2,"1.500 $ iniziali corretti. Molte regole solo nominate senza spiegarle (VIA, uscire di prigione, case e alberghi).
+Mancano asta, doppio che fa ritirare, affitto doppio, regole di costruzione. Inventa che si finisce al primo in bancarotta e vince chi ha più soldi."
+Mistral-7B,Thematic with randomness,monopoly,3,5,3,5,4,"Affitti e bancarotta corretti.
+Mancano partenza dal VIA e 200 $ di stipendio, doppio che fa ritirare, asta, regole di costruzione, uscita di prigione. Aggiunto “$2,000 in modern versions” che non è non nel regolamento."
+Mistral-7B,Social/party,dixit,1,5,5,5,4,"Errore nel caso “tutti o nessuno” (dice zero punti a tutti invece di 2 agli altri).
+Variante a 3 giocatori con numero di voti per vincere inventato."
+Mistral-7B,Social/party,dixit,2,5,5,5,5,"Completa e fedele al regolamento.
+Piccole imprecisioni: +1 per voto ricevuto espresso in modo vago, non dice che il narratore mescola anche la propria carta, soggetto ambiguo nel caso “tutti o nessuno”."
+Mistral-7B,Social/party,dixit,3,5,4,4,4,"Numero di carte “in base ai giocatori” invece di 6 (in contrasto con “their six cards”).
+Caso “tutti o nessuno” sbagliato (zero punti a tutti invece di 2 agli altri). Non dice che non si può votare la propria carta."
+Mistral-7B,Social/party,the_resistance,1,5,3,5,5,"Mancano vittoria delle spie con cinque rifiuti, pareggio = rifiuto, dimensione delle squadre,
+obbligo di Success per la Resistenza ed eccezione della 4ª missione."
+Mistral-7B,Social/party,the_resistance,2,5,3,5,4,"Cinque meccaniche presenti solo in parte.
+Spie che si riconoscono, dimensione delle squadre, maggioranza/pareggio, numero di rifiuti per la vittoria delle spie, obbligo di Success. Manca come si decide il fallimento di una missione. “Carte personaggio” distribuite in numero ambiguo."
+Mistral-7B,Social/party,the_resistance,3,5,3,5,4,"Mancano spie che si riconoscono, dimensione delle squadre, pareggio = rifiuto e passaggio del leader, obbligo di Success per la Resistenza, eccezione della 4ª missione.
+Carte personaggio distribuite in numero ambiguo."
+Mistral-7B,Social/party,werewolf,1,5,3,5,4,"Mancano secondo giocatore per l’accusa, maggioranza e ruolo non rivelato dai morti.
+Lupi vincono quando superano invece che quando eguagliano."
+Mistral-7B,Social/party,werewolf,2,5,3,4,3,"Mancano annuncio del Moderatore, secondo giocatore per l’accusa, difesa, maggioranza e ruolo non rivelato dai morti.
+Obiettivo dei lupi formulato in modo ambiguo."
+Mistral-7B,Social/party,werewolf,3,5,3,5,5,"Mancano annuncio del Moderatore, secondo giocatore per l’accusa, maggioranza e ruolo non rivelato dai morti.
+Potere del Veggente descritto in modo vago."
+Qwen,Abstract deterministic,checkers,1,4,1,1,1,"Gioco quasi del tutto inventato:
+ piazzamento dei pezzi, obiettivo “controllare il re” o l’angolo in alto a destra, 16 pezzi. Contraddizioni su obiettivo, fine partita e vittoria. Riusa termini del regolamento (zig-zag, flying king, crowned) senza il loro significato. Consiglio di strategia finale. L'unica meccanica accennata sono le catture multiple."
+Qwen,Abstract deterministic,checkers,2,5,1,1,1,"Gioco quasi del tutto inventato: linea attraverso la scacchiera, punti per caselle percorse, 9+9 pezzi, mosse fino a 4 caselle.
+Re descritto in modo contraddittorio (non va indietro / va avanti e indietro). Nessuna meccanica corretta."
+Qwen,Abstract deterministic,checkers,3,5,1,1,1,"Mescola dama e scacchi (re, cavallo, alfiere, torre, regina).
+Vittoria contraddittoria (perdi se resti senza pezzi / vinci se resti senza pezzi). Numero di pezzi incoerente. Promozione inventata. Unici elementi corretti: alternanza, cattura con salto e rimozione, mosse del re."
+Qwen,Abstract deterministic,connect-four,1,5,2,1,1,"Obiettivo rovesciato (quattro dischi dell’avversario).
+Terzo giocatore inventato. Regola inventata: se entrambi fanno quattro in fila, perdono tutti e due. Finale sul “game server” e sul computer. Mancano griglia, chi inizia e caduta del disco; pareggio vago. Colori rosso e nero inventati."
+Qwen,Abstract deterministic,connect-four,2,3,3,1,1,"Turno inventato (scegliere un numero da 0 a 6 e far cadere più dischi).
+Colonne da 4 dischi, quattro colori, “card game”. Gran parte della risposta è strategia (angoli, centro). Obiettivo e pareggio corretti. Mancano chi inizia e la caduta del disco."
+Qwen,Abstract deterministic,connect-four,3,4,2,1,1,"Sistema a punti inventato (10 punti per disco, “the disc that starts this line always scores points”).
+Turno limitato alla prima o all’ultima colonna. Pareggio sbagliato. Contraddizioni su chi inizia, sul turno e sulla vittoria. Esempi delle linee sbagliati: mostrano tre dischi invece di quattro. Consigli tattici in How to Win."
+Qwen,Abstract deterministic,nine-mens-morris,1,4,1,1,1,"Gioco quasi del tutto inventato: quattro giocatori, disposizione iniziale dei pezzi neri, mulini in diagonale. Obiettivo e vittoria incomprensibili.
+Riusa termini del regolamento (flying, pounding) con significati inventati. Consigli di strategia."
+Qwen,Abstract deterministic,nine-mens-morris,2,4,1,1,1,"Setup inventato (quattro quadranti, 3 pezzi neri e 6 bianchi per giocatore). Fase 1 descritta solo con strategia.
+Mulini in diagonale. Volo e rottura del mulino legati al blocco. Condizioni di vittoria contraddittorie (zero pezzi, più pezzi, meno pezzi). Consigli di strategia in chiusura."
+Qwen,Abstract deterministic,nine-mens-morris,3,5,2,1,1,"Mescola mulino e scacchi (king, queen, bishop).
+Terzo giocatore inventato. Tabellone 2x12 e pezzi già disposti. Volo contraddittorio. Vittoria contraddittoria (zero pezzi / due pezzi). Sequenza di “mulini” finali inventata. Mancano movimento adiacente e riapertura del mulino."
+Qwen,Low-interaction procedural,azul,1,4,2,1,1,"Plancia a quattro lati inventata, solo due giocatori.
+Segnalino del primo giocatore offerto all’avversario. Punteggio a coppie inventato (corretto solo “1 punto se isolata”). Fine partita e vittoria contraddittorie. Esempio di partita incoerente in cui il giocatore 2 vince senza motivo. Mancano le linee di preparazione, il pavimento e i bonus finali."
+Qwen,Low-interaction procedural,azul,2,5,2,2,1,"10 espositori fissi e tessere numerate inventati.
+Ruoli di primo e secondo giocatore inventati e contraddittori. Punteggio sbagliato (le diagonali valgono 2 punti). Il pavimento non dà punti negativi. Varianti inventate. Corretti 4 tessere per espositore, fine partita, vittoria e spareggio. Mancano le linee di preparazione e i bonus finali."
+Qwen,Low-interaction procedural,azul,3,5,1,1,1,"Riprende numeri e frasi del regolamento (5, 7, 9 espositori, il visitatore del Portogallo, il coperchio della scatola) ricombinandoli a caso.
+Obiettivo inventato (cinque righe orizzontali). Piastrellatura contraddittoria (dal muro al pavimento). Pareggio inventato. Mancano le linee di preparazione, il punteggio, il pavimento e i bonus."
+Qwen,Low-interaction procedural,kingdomino,1,5,2,2,2,"Turno inventato: la riduzione dei domino del setup diventa un’azione dei giocatori, con numeri che non tornano (24, 36, 48, 60).
+Manca la scelta dei domino con i re. Manca il limite 5x5 del regno. Punteggio corretto ma prima descritto come solo conteggio delle caselle. Setup di re, tessera e castello corretto."
+Qwen,Low-interaction procedural,kingdomino,2,4,3,2,1,"Riprende i nomi del regolamento (Harmony, Dynasty, linea di domino) dandogli significati inventati.
+Obiettivo “regno più grande” in contraddizione con la vittoria a punti. Manca il punteggio (caselle per corone). Manca il ruolo dei re nella scelta dei domino. Indicazioni di strategia."
+Qwen,Low-interaction procedural,kingdomino,3,5,2,2,1,"Turno inventato (domino tolti dalla scatola e messi sulla tessera, domino aggiunti al regno di un altro giocatore).
+Re assegnati per posizione al tavolo. Mancano la fila dei domino, la scelta con i re e la regola di collegamento. Punteggio corretto (caselle per corone). Obiettivo regno più grande in contraddizione con la vittoria a punti."
+Qwen,Low-interaction procedural,ticket-to-ride,1,5,1,1,1,"Turno inventato (reclamo obbligatorio più pesca dei biglietti). Biglietti che danno punti pari alla lunghezza della tratta. Vittoria contraddittoria (più treni piazzati / più punti).
+Punteggio delle tratte contraddittorio. Mancano carte iniziali, carte scoperte, regole di pesca, sottrazione per i biglietti incompleti e bonus da 10."
+Qwen,Low-interaction procedural,ticket-to-ride,2,5,2,2,1,"Copia l’elenco dei componenti del regolamento (110 carte, carta riassuntiva, carte promozionali) trattandolo come regole. Numeri del setup inventati e incoerenti (400 treni, 40 carte, 30 biglietti).
+Turni fino a 12 giocatori. Manca la struttura del turno (una sola azione), mancano le regole di pesca e la fine partita. Bonus da 10 e vittoria a punti corretti."
+Qwen,Low-interaction procedural,ticket-to-ride,3,5,2,1,1,"Turno inventato (tutte e tre le azioni nello stesso turno). Carte scoperte scambiate per biglietti destinazione.
+Punteggio inventato (±10 per collegamento). Vittoria contraddittoria (più punti / 45 segnapunti). Manca la fine partita. Setup quasi corretto (45 treni, 4 carte, 5 scoperte)."
+Qwen,Exception-heavy rule systems,exploding-kittens,1,4,2,1,1,"Copia frasi del regolamento attribuendole alle carte sbagliate (l’effetto del Defuse sotto “Skip Card”, “No More Cards” inventata).
+Setup, turno e vittoria inventati (“Whoever dies last wins”). Skip descritta in due modi diversi. Sezione di strategia ripresa dal regolamento."
+Qwen,Exception-heavy rule systems,exploding-kittens,2,5,1,1,1,"Gioco quasi del tutto inventato: punteggio, carta “No Action”, quattro mazzi, vittoria pescando 5 Exploding Kitten (che sono solo 4).
+Turno e Defuse inventati. Contraddizione tra “vince l’ultimo sopravvissuto” e “vince chi pesca 5 Exploding Kitten”."
+Qwen,Exception-heavy rule systems,exploding-kittens,3,3,1,1,1,"Gioco quasi del tutto inventato: si pesca dagli scarti, si passano carte al giocatore successivo, chi pesca un Exploding Kitten riceve un Nope, vince chi ha più Defuse.
+Contraddizioni su vittoria ed eliminazione. Circa un terzo della risposta è strategia."
+Qwen,Exception-heavy rule systems,mao,1,4,1,1,1,"Setup inventato (10-15 mazzi o 20-30 carte, solo il mazziere pesca 7 carte).
+Regole scambiate: picche invertono il giro (è l’8), terza persona = bad call. Point of Order prima vietato poi chiude la partita. Due condizioni di fine/vittoria in contraddizione. Mancano sette, Asso, regola seme/valore. Chiude con una sezione di strategia senza senso (“draw pile remains empty”)."
+Qwen,Exception-heavy rule systems,mao,2,4,1,2,1,"Setup quasi corretto ma senza carta scoperta. Manca la regola base (stesso seme o valore).
+Inventati: sette da pescare finché non se ne gioca uno, Asso jolly, carta penalità “con informazioni”, “bad call card”, “point of order card”. Sezione 5 contraddittoria (scegliere se seguire o ignorare le regole vs rispettarle sempre)."
+Qwen,Exception-heavy rule systems,mao,3,5,2,2,1,"Setup quasi completo. Le regole speciali hanno il titolo giusto ma spiegazioni inventate: Asso che comincia un nuovo round”, picche che fanno pescare l’asso di picche, Jack “named”. Mancano regola seme/valore, sette e “Mao”.
+Bad call rovesciato, Point of Order che decide la fine della partita. Obiettivo contraddittorio (eliminare gli avversari, nessuno deve restare senza carte)."
+Qwen,Exception-heavy rule systems,uno,1,5,1,1,1,"Titoli del regolamento con contenuto inventato. Manca la regola base (stesso colore, numero o simbolo).
+Effetti delle carte speciali tutti sbagliati; punti calcolati sulle carte pescate con valori che raddoppiano. Vittoria descritta in quattro modi incompatibili."
+Qwen,Exception-heavy rule systems,uno,2,4,1,1,1,"Mazzo inventato (semi francesi, carte 2-10).
+Si fanno punti abbinando le carte; vince chi ha più punti, in contraddizione con i 500 punti in tabella. “Uno” detto senza carte in mano. Skip e Wild Draw Four sbagliati. Tabella dei valori corretta ma applicata al meccanismo sbagliato. Breve sezione di strategia."
+Qwen,Exception-heavy rule systems,uno,3,4,2,1,1,"Unica parte corretta le cinque carte speciali con effetti giusti. Mancano regola base (colore, numero o simbolo), pescata e “Uno”.
+Setup inventato (mazzo con semi, mazziere che crea altri mazzieri). Fine partita incoerente (pescare due carte per vincere, “tossing the coin”, rimescolare se nessuno arriva a 500). Breve sezione di consigli."
+Qwen,Thematic with randomness,clue,1,5,1,1,1,"Gioco quasi del tutto inventato: niente busta, ipotesi, smentite né accuse.
+Dado per identificare sospettati, eliminazione dell’ultimo che entra in una stanza, premi finali, nuovo round. Le uniche parti fedeli sono le regole sui passaggi segreti e sulle caselle occupate. Tre condizioni di fine incompatibili."
+Qwen,Thematic with randomness,clue,2,5,1,1,1,"Ipotesi abbozzata quasi correttamente (sospettato e arma nella stanza in cui si è).
+Mazzo senza carte stanza, si chiede di vedere le carte della busta, chi accusa mostra le carte. Vittoria contraddittoria (trovare le carte vs dimostrare falsa la propria accusa), penalità per chi perde. Mancano distribuzione delle carte, Miss Scarlet che inizia e unica accusa."
+Qwen,Thematic with randomness,clue,3,5,1,1,1,"Gioco quasi del tutto inventato. Busta mai riempita, carte “Dice”, sospettati scelti col dado, movente al posto del luogo.
+Ipotesi per sospettato o arma con esempi senza senso. Vittoria per numero di “victories”. L'unica parte vicina al regolamento è il dado e i passaggi segreti e il divieto di rientrare nella stessa stanza."
+Qwen,Thematic with randomness,forbidden-island,1,5,2,1,1,"Turno, quattro azioni con vincoli e vittoria copiati correttamente.
+Setup ridotto a un elenco senza senso. Inventa premi e Freedom Badge, Helicopter Lift che alza l’acqua, Waters Rise che spostano pedine, acqua che sale a ogni turno e poi scende, pareggi. Mancano effetto delle carte Flood, limite di mano e sconfitte."
+Qwen,Thematic with randomness,forbidden-island,2,5,1,1,1,"L'unica parte corretta è la struttura base del turno e i nomi delle quattro azioni.
+Setup inventato (quadranti da 24 tessere, mazzi sbagliati, niente avventurieri). Carte Flood sempre 2. Tessere che affondano se ci si muove sopra o le si rinforza. Helicopter Lift e Sandbags con effetti inventati; Waters Rise scartata senza effetto. Sconfitta sbagliata."
+Qwen,Thematic with randomness,forbidden-island,3,5,2,2,1,"Turno inventato (carte Tesoro dopo ogni azione, nessuna carta Flood).
+Cattura confusa con il dare carte (una carta, tessera adiacente, statuetta su Fools’ Landing). Isola che affonda se l’acqua scende. Regola del nuotare contraddittoria. Manca Helicopter Lift per vincere."
+Qwen,Thematic with randomness,monopoly,1,5,1,1,1,"Azioni decise col dado, “Household Items”, affitto pagato dopo ogni azione, pedina restituita alla Banca, valori che crescono a ogni turno.
+Obiettivo contraddittorio (“run out of money”). Prestiti tra giocatori (vietati dal regolamento). Elenco finale di round che si ripete senza senso."
+Qwen,Thematic with randomness,monopoly,2,5,1,1,1,"Unica parte corretta il setup (1.500 $, Banchiere, partenza dal VIA) e i due dadi per muoversi.
+Inventa Monopolyville, stanze, turno del Banchiere, tre mosse per turno, punti e prestigio. Vittoria rovesciata (si vince raggiungendo la bancarotta). Mancano VIA, acquisto/asta, affitto, costruzione, prigione."
+Qwen,Thematic with randomness,monopoly,3,5,1,1,1,"Inventa case blu e gialle, prezzo come ""radice quadrata delle stanze che contiene la casa"", proprietari che pagano l’affitto alla Banca, chi paga l’affitto riceve un premio, scommesse sulle carte Chance.
+Dadi contraddittori (tre poi sei). Bancarotta ridefinita e vittoria contraddittoria. Unica parte corretta i 1.500 $ e la partenza dal VIA."
+Qwen,Social/party,dixit,1,4,1,1,1,"Unica parte corretta la frase del narratore detta senza mostrare la carta.
+Inventa due giocatori, limite di tempo, tracciato da 84 caselle, una carta a testa, gettoni che rappresentano frasi, punteggi senza senso e contraddittori. Mancano carte date al narratore, voto segreto e vincitore. Sezione finale di strategia."
+Qwen,Social/party,dixit,2,4,1,1,1,"Inventa squadre, personaggio “Dixit”, ruoli con numeri diversi di carte e gettoni, carte scelte da un “display”, pesca dal tracciato, vittoria a chi pesca l’ultima carta.
+Punteggio del setup in parte corretto ma contraddetto nelle meccaniche. Sezione finale di strategia."
+Qwen,Social/party,dixit,3,2,1,1,1,"Risposta degenerata in un ciclo e troncata al limite di token, ferma al setup.
+Setup inventato: griglia A-F × 1-4, immagini etichettate “Rabbeeples”. Nessuna meccanica spiegata."
+Qwen,Social/party,the_resistance,1,4,2,2,2,"Struttura a fasi, passaggio del leader dopo un rifiuto e vittoria a tre missioni corretti.
+Inventate sei fazioni. Missione giocata con carte voto invece di Success/Fail; mancano regola della Fail, cinque rifiuti, spie che si riconoscono, dimensione delle squadre. Voto e missione confusi. Sezione finale di strategia."
+Qwen,Social/party,the_resistance,2,5,1,1,1,"Frasi copiate dal regolamento. Inventa numero del leader da 1 a 100, carte personaggio distribuite tre volte, voto con le carte missione e approvazione con la metà dei voti.
+Mancano spie che si riconoscono, Success/Fail, cinque rifiuti. Vittoria delle spie contraddittoria (tre poi cinque missioni fallite)."
+Qwen,Social/party,the_resistance,3,5,1,1,1,"Inventa dadi e punti, voto deciso pescando una carta a caso, unanimità, ogni squadra approvata dà un successo, spie che aiutano la Resistenza.
+Mancano spie che si riconoscono, Success/Fail, regola della Fail e cinque rifiuti. Varianti stravolte."
+Qwen,Social/party,werewolf,1,5,1,1,1,"L'unica parte corretta è la condizione di vittoria nella sezione 5, contraddetta dall’obiettivo.
+Dottore e Veggente che aiutano i lupi, lupo che sceglie chi salvare, Villagers che muoiono solo se lo scelgono. Giorno senza annuncio, accuse né voto. Numero minimo di giocatori contraddittorio (7 poi 8)."
+Qwen,Social/party,werewolf,2,5,1,1,1,"Inventa: cicli di battaglie tra Villagers e lupi di notte e di giorno, Dottore che cura i lupi, vince il primo Villager ucciso.
+Obiettivo contraddittorio. Mancano annuncio, accuse, voto e vittoria dei lupi. Uniche parti vicine al regolamento i lupi che scelgono una vittima e il Dottore che sceglie chi curare."
+Qwen,Social/party,werewolf,3,5,2,1,1,"Accusa con secondo giocatore, difesa e voto corretti (copiati dal regolamento).
+Ruoli senza Villagers, notte e giorno stravolti (di giorno si sveglia un lupo, vittima scelta per contatto visivo), Dottore che cura i lupi. Mancano annuncio, ruolo non rivelato e vittoria dei lupi alla parità. Sopravvissuto che diventa parte del Villaggio."
+Qwen-7B,Abstract deterministic,checkers,1,5,4,4,3,Spiegazione chiara e quasi completa. Sbaglia quando dice che inizia il giocatore con i pezzi chiari. Movimento senza passo singolo né casella libera. Incoerenza: dodici pedine sulle dieci caselle scure.
+Qwen-7B,Abstract deterministic,checkers,2,5,5,5,4,Molto fedele. Sbaglia solo le prese multiple in linea retta invece che a zigzag e il re volante che si muove in ogni direzione invece che in diagonale.
+Qwen-7B,Abstract deterministic,checkers,3,5,5,4,4,"Molto fedele. Tra le condizioni di vittoria compaiono solo l’eliminazione e uno stalemate inventato, mentre la vittoria per blocco è solo nell’obiettivo. Re che salta in ogni direzione."
+Qwen-7B,Abstract deterministic,connect-four,1,4,5,5,4,Tutte le meccaniche presenti e corrette. La sezione “Core mechanics” è interamente strategia (attacco e difesa). Alcune aggiunte esterne minori come colori rosso e giallo e pareggi rari.
+Qwen-7B,Abstract deterministic,connect-four,2,4,5,5,4,"Tutte le meccaniche presenti e corrette. Sezione “Core mechanics” interamente strategica, più consigli anche nella sezione finale. Aggiunge colori rosso e giallo e linea di esattamente quattro."
+Qwen-7B,Abstract deterministic,connect-four,3,5,5,5,5,Completa e fedele.. Un solo punto di strategia (bloccare l’avversario) dentro la sezione delle meccaniche. Nessuna invenzione.
+Qwen-7B,Abstract deterministic,nine-mens-morris,1,4,4,4,3,"Tre fasi e vittoria spiegate bene. Manca la protezione dei pezzi nei mulini, sostituita da una restrizione inventata (non si toglie un pezzo se si resta sotto i tre) che va contro la vittoria per riduzione a due pezzi. Movimento senza casella libera né divieto di salto; mulino rotto e riformato solo tra le strategie. Sezione Core mechanics interamente strategica."
+Qwen-7B,Abstract deterministic,nine-mens-morris,2,5,5,4,3,"Inventa mulini anche in diagonale (ripetuto due volte), griglia “4x6”, volo che non può scavalcare pezzi. Protezione dei pezzi nei mulini confusa. Pareggio descritto in modo incoerente (“often” e poi “rarely”)."
+Qwen-7B,Abstract deterministic,nine-mens-morris,3,5,4,3,3,"Manca rompere e riformare un mulino; protezione dei pezzi nei mulini confusa; movimento senza casella libera né divieto di salto. Contraddizione sui mulini (prima solo orizzontali e verticali, poi anche diagonali). Aggiunte minori: tavoliere “a croce”, lancio della moneta o del dado, “18 punti riempiti”."
+Qwen-7B,Low-interaction procedural,azul,1,5,3,4,3,"Struttura completa ma vaga sui dettagli: regole delle righe del modello accennate, punteggio per adiacenza, bonus finali senza valori, nessuna tessera scartata. Fa un errore grave ovvero che le righe incomplete vengono tolte a fine round. Fasi descritte come fasi del turno."
+Qwen-7B,Low-interaction procedural,azul,2,5,4,5,3,"Manca il divieto di un colore già presente nella riga; punteggio delle tessere solo per adiacenza. Errori: le tessere avanzate vanno sul pavimento (vanno nel coperchio), il pavimento toglie punti a fine partita invece che a ogni round."
+Qwen-7B,Low-interaction procedural,azul,3,5,2,5,3,"Struttura completa ma senza i numeri né le regole delle righe del modello. Sbaglia righe incomplete tolte a fine round, tessere aggiungibili solo a righe già iniziate."
+Qwen-7B,Low-interaction procedural,kingdomino,1,5,4,5,4,"Generica sulle regole chiave. Collegamento (existing territory vago, scarto solo per la griglia) e punteggio senza la moltiplicazione caselle x corone. Re a 2 giocatori non specificati. Aggiunge 12 turni per tutti, regole di collegamento applicate anche alla scelta."
+Qwen-7B,Low-interaction procedural,kingdomino,2,5,5,4,4,"Incoerenze minori: un re per giocatore tra i componenti, turni in senso orario invece che secondo la posizione dei re."
+Qwen-7B,Low-interaction procedural,kingdomino,3,5,4,3,3,"Grave quando dice che l’ordine resta costante per tutta la partita, mentre lo decide la posizione dei re ogni round. Manca il numero di re per giocatore. La linea è legata al numero di giocatori ma l’esempio la contraddice. Middle Kingdom e Harmony sono presentati come punteggio standard."
+Qwen-7B,Low-interaction procedural,ticket-to-ride,1,5,4,4,3,"Pesca delle carte confusa: una dal mazzo, rimpiazzo dagli scarti, la regola della locomotiva scoperta solo accennata. Non dice che le carte devono essere dello stesso colore e non cita le tratte grigie. Grave errore l'eccezione delle doppie tratte invertita (2 giocatori). Spareggio senza completati."
+Qwen-7B,Low-interaction procedural,ticket-to-ride,2,5,4,3,3,Sbaglia la locomotiva scoperta che conta come una carta. Manca tenerne almeno 2 all’inizio. Bonus senza il valore +10 e descritto come “single-color”. Pesca e fine partita formulate in modo contraddittorio. Spareggio senza completati.
+Qwen-7B,Low-interaction procedural,ticket-to-ride,3,5,4,4,3,"Sbaglia che la locomotiva scoperta viene scartata. Mancano il tenerne almeno 2 all’inizio, la locomotiva come jolly nel claim e le tratte grigie. Fine partita senza vagoni invece che con ≤2. Percorso di un solo colore."
+Qwen-7B,Exception-heavy rule systems,exploding-kittens,1,5,4,3,2,"Attack descritta come il prossimo salta il turno. Il tris prende dagli scarti, confuso con le 5 carte diverse. Mancano la coppia, Skip, Shuffle e See the Future. Frase contraddittoria sul giocare carte; il Defuse rimuove temporaneamente l'exploding kitten; guarda le 5 carte a ogni turno."
+Qwen-7B,Exception-heavy rule systems,exploding-kittens,2,5,4,4,3,Mancano il tris e le 5 carte diverse. Grave il Nope che annulla anche l'exploding kitten e il Defuse (eccezione invertita). Favor come rubare; 5 carte a ogni turno.
+Qwen-7B,Exception-heavy rule systems,exploding-kittens,3,5,4,4,4,Manca See the Future. Defuse extra rimessi solo nella variante a 2 (sbagliato). 5 carte a ogni turno.
+Qwen-7B,Exception-heavy rule systems,mao,1,5,3,4,4,"Fedele ma incompleta. Mancano il Point of Order, il divieto di parlare, chi inizia e la direzione, e il fatto che chiunque possa dare la penalità motivandola. Bad call con i ruoli confusi. Sette e regole speciali (8, A, J, picche) corrette; vittoria e nuova regola segreta corrette."
+Qwen-7B,Exception-heavy rule systems,mao,2,5,3,4,4,"Fedele ma con buchi grossi. Mancano i sette, le penalità con il bad call e il Point of Order. Setup completo con chi inizia e la direzione; regole speciali tutte presenti; vittoria e regola segreta corrette. La sezione 3 è vuota (“follows these steps:” senza passi). Il divieto di parlare ha una motivazione inventata."
+Qwen-7B,Exception-heavy rule systems,mao,3,5,3,4,4,"Mancano i sette, l’Asso, le penalità con il bad call e il Point of Order (questi ultimi due solo nominati). Setup, gioco base con esempio, 8, Jack, vittoria e regola segreta corretti. Le picche nominano la carta precedente invece di quella giocata. “L’obiettivo non è semplicemente vincere”."
+Qwen-7B,Exception-heavy rule systems,uno,1,5,4,3,3,Non dice che il vincitore incassa i punti degli avversari. Penalità Uno contraddittoria (1 carta / 2 carte). Mazziere scelto dopo aver distribuito; penalità dentro il punteggio.
+Qwen-7B,Exception-heavy rule systems,uno,2,5,4,4,3,"Le 7 carte a testa non sono mai dette. Grave che la penalità Uno la paghi il giocatore successivo, e manca “if caught”. Esattamente 500 punti; assi senza valore; non dice che il vincitore incassa i punti degli avversari."
+Qwen-7B,Exception-heavy rule systems,uno,3,5,5,4,4,"Non dice che il vincitore incassa i punti degli avversari. Annuncio ""I have one card left!"" inventato."
+Qwen-7B,Thematic with randomness,clue,1,5,3,3,3,"Si mostrano tutte le carte nominate, non una in segreto. Mancano il limite di un’accusa e l’esclusione dopo l’errore; manca lo spostamento di sospettato e arma nella stanza. “Accused” confuso con l’accusatore; stanze scelte a caso."
+Qwen-7B,Thematic with randomness,clue,2,5,3,3,3,"Manca chi inizia (Scarlet, poi a sinistra). Il suggerimento non è legato alla stanza attuale e non sposta i pezzi. Armi in ognuna delle nove stanze. Mancano l’ordine e la segretezza della smentita. Frasi confuse su accusa e ipotesi."
+Qwen-7B,Thematic with randomness,clue,3,4,3,3,3,"Mancano chi inizia, il limite di un’accusa con il controllo segreto, l’ordine e la segretezza della smentita e i limiti di movimento. La sezione 5 è fatta di consigli strategici. Accusa e ipotesi confusi; movimenti segreti delle pedine."
+Qwen-7B,Thematic with randomness,forbidden-island,1,5,3,4,3,"Waters Rise! scartata senza effetto. Mancano il limite di 5 carte, la regola allagata/affondata e la sconfitta per il teschio. Sconfitta con tutti e quattro i tesori persi (sbagliata); statuette sulle tessere; frase senza senso su chi inizia."
+Qwen-7B,Thematic with randomness,forbidden-island,2,5,3,3,3,"Mancano l’effetto di Waters Rise!, la regola allagata/affondata e il limite di 5 carte. Sbaglia le sconfitte con tessere allagate invece che affondate, e una sola tessera del tesoro invece di entrambe, in contraddizione con lo shore up. 2-4 amici; Sandbags bloccano temporaneamente."
+Qwen-7B,Thematic with randomness,forbidden-island,3,5,3,3,3,"Mancano le 6 tessere allagate, le 2 carte iniziali, la regola allagata/affondata e il limite di 5 carte. Waters Rise! scartata, con la risalita attribuita al Flood deck. Le azioni dipendono dalla posizione; 6 carte avventuriero distribuite; condizione sui tesori formulata male."
+Qwen-7B,Thematic with randomness,monopoly,1,5,3,4,4,"Fedele ma con mancanze. Mancano i $200 del Via, il ritiro con il doppio, l’affitto doppio con il gruppo completo, la costruzione uniforme delle case, il Banchiere e le pedine sul Via. Corretti l’acquisto con l’asta, le ipoteche, la prigione (tre modi per uscire, tre doppi), la bancarotta. Vincitore descritto in maniera ambigua (più ricco di tutti gli altri insieme e ultimo rimasto)."
+Qwen-7B,Thematic with randomness,monopoly,2,5,3,3,3,"Mancano i $200 del Via, i doppi, la prigione e come uscirne, l’affitto doppio e la costruzione uniforme. Tre dadi (variante); regola che ogni casa costa meno della precedente inventata. Contraddizione vincitore più ricco contro ultimo rimasto."
+Qwen-7B,Thematic with randomness,monopoly,3,5,4,3,3,"Mancano le pedine sul Via, i doppi, l’affitto doppio e la costruzione uniforme. In prigione non si incassano affitti (il regolamento dice il contrario). Speed Die inventato; frase sul Via contraddittoria; contraddizione vincitore più ricco contro ultimo rimasto."
+Qwen-7B,Social/party,dixit,1,4,4,4,4,"Mancano la ripesca fino a 6 e il passaggio del narratore a sinistra, e il divieto di votare la propria carta. La sezione 4 è di strategia (Guessing Strategy). L’obiettivo cita solo l’indovinare."
+Qwen-7B,Social/party,dixit,2,5,4,4,2,"Punteggio sbagliato in due punti gravi: con tutti/nessuno nessuno fa punti (gli altri prendono 2), e il narratore +1 per ogni giocatore che indovina. Manca il 3 per chi indovina. La variante a 3 giocatori (4 punti) presentata come base. Il narratore è chiunque annunci invece del giocatore a sinistra. Manca la consegna delle carte con il mescolamento."
+Qwen-7B,Social/party,dixit,3,5,4,2,3,Le carte non vengono date al narratore né mescolate né esposte; scelta e voto sono fusi. Manca il divieto di votare la propria carta. Molte contraddizioni. L'obiettivo di arrivare in fondo e quello di esaurire il mazzo; primo narratore a caso contro chi descrive per primo; gettoni sotto carte mai esposte. Spareggio inventato.
+Qwen-7B,Social/party,the_resistance,1,4,4,3,3,"Il Leader rivela la sua carta alle Spie invece di pronunciare le frasi del copione a occhi chiusi. Mancano la tabella dei ruoli, il pareggio che respinge con il passaggio della leadership, l’obbligo di Success per la Resistenza e l’eccezione esatta (4ª missione, 7+). La squadra viene votata due volte. La sezione 4 è di strategia."
+Qwen-7B,Social/party,the_resistance,2,5,4,4,4,"Mancano il pareggio che respinge con il passaggio della leadership, il numero esatto di 5 rifiuti e l’obbligo di Success per la Resistenza. L’eccezione dei due Fail è estesa a tutte le missioni con 7+ giocatori."
+Qwen-7B,Social/party,the_resistance,3,4,3,3,3,"Mancano la tabella dei ruoli, la dimensione della squadra, il pareggio che respinge con il passaggio della leadership, l’obbligo esplicito di Success e l’eccezione esatta dei due Fail. La sezione 4 è di strategia. Gli Operativi nascondono la loro fedeltà."
+Qwen-7B,Social/party,werewolf,1,5,4,4,4,Mancano l’annuncio all’alba (ucciso o salvato) e i morti escono senza rivelare il ruolo. Frase contraddittoria sul risveglio dei morti; regola oltre i 15 giocatori riformulata.
+Qwen-7B,Social/party,werewolf,2,5,4,4,4,Manca che i morti non rivelano il ruolo. Voto segreto inventato; regola oltre i 15 riformulata; ruoli risvegliati anche di giorno.
+Qwen-7B,Social/party,werewolf,3,5,5,4,3,I morti non scoprono il loro personaggio invece di “non lo rivelano”. Obiettivo superare in contraddizione con vittoria data da pareggio. Regola oltre i 15 riformulata; motivazione inventata per il numero dispari.
