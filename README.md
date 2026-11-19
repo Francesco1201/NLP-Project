@@ -1,4 +1,4 @@
-# Board game rules and LLMs
+# Game of Thoughts
 
 This project studies how well large language models of different sizes understand, apply and generate rules for board games. Four instruction-tuned models are tested on rulebooks of 15 board games, divided into five categories, in five tasks grouped in three parts:
 
